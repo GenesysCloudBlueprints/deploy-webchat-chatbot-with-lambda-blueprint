@@ -38,7 +38,25 @@ module "lambda_data_action" {
 }
 
 module "dude_queues" {
+
   source                   = "git::https://github.com/GenesysCloudDevOps/genesys-cloud-queues-demo.git?ref=main"
   classifier_queue_names   = ["dude-cancellations", "dude-general-support"]
   classifier_queue_members = []
 }
+
+data "genesyscloud_flow" "my_chat_flow" {
+  depends_on = [
+    null_resource.deploy_archy_flow_chat
+  ]
+  name = "DudeWheresMyStuffChat"
+}
+
+module "widget_deploy" {
+  source      = "./modules/widget_deployment"
+  environment = "dev"
+  prefix      = "dude-order-status"
+  flowId      = data.genesyscloud_flow.my_chat_flow.id
+}
+
+
+
