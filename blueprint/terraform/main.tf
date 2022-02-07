@@ -5,10 +5,10 @@ is used by Genesys Cloud to invoke the lambda in
 */
 module "lambda_order_status" {
   source                  = "./modules/lambda_order_status"
-  environment             = "dev"
-  prefix                  = "dude-order-status"
-  organizationId          = "011a0480-9a1e-4da9-8cdd-2642474cf92a"
-  aws_region              = "us-west-2"
+  environment             = var.environment
+  prefix                  = var.prefix
+  organizationId          = var.organizationId
+  aws_region              = var.awsRegion
   lambda_zip_file         = data.archive_file.lambda_zip.output_path
   lambda_source_code_hash = data.archive_file.lambda_zip.output_base64sha256
 }
@@ -18,8 +18,8 @@ module "lambda_order_status" {
 */
 module "lambda_data_integration" {
   source                            = "git::https://github.com/GenesysCloudDevOps/integration-lambda-module.git?ref=main"
-  environment                       = "dev"
-  prefix                            = "dude-order-status"
+  environment                       = var.environment
+  prefix                            = var.prefix
   data_integration_trusted_role_arn = module.lambda_order_status.data_integration_trusted_role_arn
 }
 
@@ -28,8 +28,8 @@ module "lambda_data_integration" {
 */
 module "lambda_data_action" {
   source                 = "git::https://github.com/GenesysCloudDevOps/data-action-lambda-module.git?ref=main"
-  environment            = "dev"
-  prefix                 = "dude-order-status"
+  environment            = var.environment
+  prefix                 = var.prefix
   secure_data_action     = false
   genesys_integration_id = module.lambda_data_integration.genesys_integration_id
   lambda_arn             = module.lambda_order_status.lambda_arn
@@ -38,24 +38,23 @@ module "lambda_data_action" {
 }
 
 module "dude_queues" {
-
   source                   = "git::https://github.com/GenesysCloudDevOps/genesys-cloud-queues-demo.git?ref=main"
   classifier_queue_names   = ["dude-cancellations", "dude-general-support"]
   classifier_queue_members = []
 }
 
-data "genesyscloud_flow" "my_chat_flow" {
-  depends_on = [
-    null_resource.deploy_archy_flow_chat
-  ]
-  name = "DudeWheresMyStuffChat"
-}
+# data "genesyscloud_flow" "my_chat_flow" {
+#   depends_on = [
+#     null_resource.deploy_archy_flow_chat
+#   ]
+#   name = "DudeWheresMyStuffChat"
+# }
 
 module "widget_deploy" {
   source      = "./modules/widget_deployment"
-  environment = "dev"
-  prefix      = "dude-order-status"
-  flowId      = data.genesyscloud_flow.my_chat_flow.id
+  environment = var.environment
+  prefix      = var.prefix
+  flowId      = genesyscloud_architect_flow.deploy_archy_flow_chat.id
 }
 
 

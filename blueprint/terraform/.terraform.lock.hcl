@@ -5,7 +5,7 @@ provider "genesys.com/mypurecloud/genesyscloud" {
   version     = "0.1.0"
   constraints = "0.1.0"
   hashes = [
-    "h1:Jmk4Ygdoj04IgqMeakcHGtak0MXunfEf2n4gXKlABb8=",
+    "h1:iHAiVUkcEtZAaH0hlNboh/7+5eexOMazmuZb3TfKuOY=",
   ]
 }
 

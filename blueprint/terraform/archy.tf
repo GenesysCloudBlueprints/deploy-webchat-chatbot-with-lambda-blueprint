@@ -1,23 +1,45 @@
-resource "null_resource" "deploy_archy_flow_bot" {
-  depends_on = [
-    module.lambda_data_integration,
-    module.lambda_data_action
-  ]
+# resource "null_resource" "deploy_archy_flow_bot" {
+#   depends_on = [
+#     module.lambda_data_integration,
+#     module.lambda_data_action
+#   ]
 
-  provisioner "local-exec" {
-    command = "  archy publish --forceUnlock --file architect-flows/DudesWheresMyStuffBot_v16-0.yaml --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location $GENESYSCLOUD_ARCHY_REGION  --overwriteResultsFile --resultsFile results.json "
-  }
-}
+#   provisioner "local-exec" {
+#     command = "  archy publish --forceUnlock --file architect-flows/DudesWheresMyStuffBot_v16-0.yaml --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location $GENESYSCLOUD_ARCHY_REGION  --overwriteResultsFile --resultsFile results.json "
+#   }
+# }
 
-resource "null_resource" "deploy_archy_flow_chat" {
-  depends_on = [
-    module.lambda_data_integration,
-    module.lambda_data_action,
-    null_resource.deploy_archy_flow_bot,
-    module.dude_queues
-  ]
+# resource "null_resource" "deploy_archy_flow_chat" {
+#   depends_on = [
+#     module.lambda_data_integration,
+#     module.lambda_data_action,
+#     null_resource.deploy_archy_flow_bot,
+#     module.dude_queues
+#   ]
 
-  provisioner "local-exec" {
-    command = "  archy publish --forceUnlock --file architect-flows/DudeWheresMyStuffChat_v23-0.yaml --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location $GENESYSCLOUD_ARCHY_REGION  --overwriteResultsFile --resultsFile results.json "
-  }
-}
+#   provisioner "local-exec" {
+#     command = "  archy publish --forceUnlock --file architect-flows/DudeWheresMyStuffChat_v23-0.yaml --clientId $GENESYSCLOUD_OAUTHCLIENT_ID --clientSecret $GENESYSCLOUD_OAUTHCLIENT_SECRET --location $GENESYSCLOUD_ARCHY_REGION  --overwriteResultsFile --resultsFile results.json "
+#   }
+# }  
+
+  resource "genesyscloud_architect_flow" "deploy_archy_flow_bot" {
+    depends_on = [
+      module.lambda_data_integration,
+      module.lambda_data_action
+    ]
+
+    filepath="architect-flows/DudesWheresMyStuffBot_v16-0.yaml"
+  }  
+
+  resource "genesyscloud_architect_flow"  "deploy_archy_flow_chat" {
+    depends_on = [
+      module.lambda_data_integration,
+      module.lambda_data_action,
+      genesyscloud_architect_flow.deploy_archy_flow_bot,
+      module.dude_queues
+    ]
+
+
+    filepath="architect-flows/DudeWheresMyStuffChat_v23-0.yaml"
+  }  
+
