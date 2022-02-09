@@ -7,8 +7,7 @@ terraform {
     }
 
     genesyscloud = {
-      source  = "genesys.com/mypurecloud/genesyscloud"
-      version = "0.1.0"
+      source = "mypurecloud/genesyscloud"
     }
   }
 }

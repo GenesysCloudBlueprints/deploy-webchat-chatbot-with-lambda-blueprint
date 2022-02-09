@@ -43,18 +43,18 @@ module "dude_queues" {
   classifier_queue_members = []
 }
 
-# data "genesyscloud_flow" "my_chat_flow" {
-#   depends_on = [
-#     null_resource.deploy_archy_flow_chat
-#   ]
-#   name = "DudeWheresMyStuffChat"
-# }
+data "genesyscloud_flow" "my_chat_flow" {
+  depends_on = [
+    null_resource.deploy_archy_flow_chat
+  ]
+  name = "DudeWheresMyStuffChat"
+}
 
 module "widget_deploy" {
   source      = "./modules/widget_deployment"
   environment = var.environment
   prefix      = var.prefix
-  flowId      = genesyscloud_architect_flow.deploy_archy_flow_chat.id
+  flowId      = data.genesyscloud_flow.my_chat_flow.id
 }
 
 

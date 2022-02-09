@@ -7,11 +7,7 @@ locals {
   lambda_timeout = 10
 }
 
-# locals {
-#   genesys_cloud_account_arn = "arn:aws:iam::765628985471:root" //this is for the prod genesys cloud.  Non prod regions have to use the AWS account number here
-# }
-
 locals {
-  genesys_cloud_account_arn = "arn:aws:iam::490606849374:root" //This is for inindca here.
+  genesys_cloud_account_arn = "arn:aws:iam::765628985471:root" //this is for the prod genesys cloud.  Non prod regions have to use the AWS account number here
 }
 
