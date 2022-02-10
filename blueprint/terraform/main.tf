@@ -37,12 +37,18 @@ module "lambda_data_action" {
   data_action_output     = file("${path.module}/contracts/data-action-output.json")
 }
 
+/*
+   Creates the queues used within the flow
+*/
 module "dude_queues" {
   source                   = "git::https://github.com/GenesysCloudDevOps/genesys-cloud-queues-demo.git?ref=main"
   classifier_queue_names   = ["dude-cancellations", "dude-general-support"]
   classifier_queue_members = []
 }
 
+/*
+   Looks up the id of the flow so we can associate it with a widget
+*/
 data "genesyscloud_flow" "my_chat_flow" {
   depends_on = [
     null_resource.deploy_archy_flow_chat
@@ -50,6 +56,9 @@ data "genesyscloud_flow" "my_chat_flow" {
   name = "DudeWheresMyStuffChat"
 }
 
+/*   
+   Configures the widget deployment
+*/
 module "widget_deploy" {
   source      = "./modules/widget_deployment"
   environment = var.environment
