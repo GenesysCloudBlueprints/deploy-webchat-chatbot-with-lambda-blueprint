@@ -62359,3 +62359,1597 @@ Headers:
 	Via: 1.1 ea5efad48fd2ca3e2050f885ef5ad57c.cloudfront.net (CloudFront)
 CorrelationId: 8d72f180-de58-492b-b9f7-d1799143c1bb
 Body: {"message":"QueueV2 91e8a99d-ad57-42ac-b61f-3b3ea580052a does not exist.","code":"resource.not.found","status":404,"messageWithParams":"{entity} {id} does not exist.","messageParams":{"id":"91e8a99d-ad57-42ac-b61f-3b3ea580052a","entity":"QueueV2"},"contextId":"8d72f180-de58-492b-b9f7-d1799143c1bb","details":[],"errors":[]}
+TRACE: 2022/02/17 14:30:23 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Date: Thu, 17 Feb 2022 19:30:23 GMT
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: da8081b9-fcc8-496e-4d73-7029f7d68e2a
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+CorrelationId: da8081b9-fcc8-496e-4d73-7029f7d68e2a
+DEBUG: 2022/02/17 14:30:23 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:23 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Date: Thu, 17 Feb 2022 19:30:23 GMT
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: 4d5d799b-226f-4f1d-7324-aa0ccc1c7d9d
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+CorrelationId: 4d5d799b-226f-4f1d-7324-aa0ccc1c7d9d
+DEBUG: 2022/02/17 14:30:23 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	Authorization: [REDACTED]
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:24 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+	User-Agent: GC Terraform Provider/1.1.0
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:24 GMT
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: f42243d1-78ca-4620-5b53-3b99f1f402c2
+CorrelationId: f42243d1-78ca-4620-5b53-3b99f1f402c2
+DEBUG: 2022/02/17 14:30:24 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:24 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Length: 147
+	Inin-Correlation-Id: 313b9c5f-2470-4e83-5c8c-ea0dcf5904eb
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:24 GMT
+	Content-Type: application/json
+CorrelationId: 313b9c5f-2470-4e83-5c8c-ea0dcf5904eb
+DEBUG: 2022/02/17 14:30:24 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:25 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: 599d7d53-b1de-4d13-6b90-e1a23fc390a6
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:25 GMT
+CorrelationId: 599d7d53-b1de-4d13-6b90-e1a23fc390a6
+DEBUG: 2022/02/17 14:30:25 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:25 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Length: 147
+	Inin-Correlation-Id: e5c72778-4690-4f8f-4acf-d5eb07e99a30
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:25 GMT
+	Content-Type: application/json
+CorrelationId: e5c72778-4690-4f8f-4acf-d5eb07e99a30
+DEBUG: 2022/02/17 14:30:25 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:26 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Date: Thu, 17 Feb 2022 19:30:26 GMT
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: 7a44c97e-6818-4a28-61e1-bb0049fce1a6
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+CorrelationId: 7a44c97e-6818-4a28-61e1-bb0049fce1a6
+DEBUG: 2022/02/17 14:30:26 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:26 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+	User-Agent: GC Terraform Provider/1.1.0
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Inin-Correlation-Id: 24750c8b-d092-4d84-4975-301981a29b71
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:26 GMT
+	Content-Type: application/json
+	Content-Length: 147
+CorrelationId: 24750c8b-d092-4d84-4975-301981a29b71
+DEBUG: 2022/02/17 14:30:26 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:27 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:27 GMT
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: 4df09acc-1ec5-4a21-78e7-9a031f50397b
+CorrelationId: 4df09acc-1ec5-4a21-78e7-9a031f50397b
+DEBUG: 2022/02/17 14:30:27 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:27 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Date: Thu, 17 Feb 2022 19:30:27 GMT
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: 6b007a2f-cb84-4306-521a-1b4d69da3c76
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+CorrelationId: 6b007a2f-cb84-4306-521a-1b4d69da3c76
+DEBUG: 2022/02/17 14:30:27 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:28 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Inin-Correlation-Id: 68ee8a27-e1b8-4e41-56c3-e846967ec97a
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:28 GMT
+	Content-Type: application/json
+	Content-Length: 147
+CorrelationId: 68ee8a27-e1b8-4e41-56c3-e846967ec97a
+DEBUG: 2022/02/17 14:30:28 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:28 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:28 GMT
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: edafa3d1-1426-425e-4e16-bb2a3904ae78
+	Strict-Transport-Security: max-age=7776000
+CorrelationId: edafa3d1-1426-425e-4e16-bb2a3904ae78
+DEBUG: 2022/02/17 14:30:28 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	Authorization: [REDACTED]
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:29 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Date: Thu, 17 Feb 2022 19:30:29 GMT
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: 334438d2-9277-4209-6aa4-e32928636b2a
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+CorrelationId: 334438d2-9277-4209-6aa4-e32928636b2a
+DEBUG: 2022/02/17 14:30:29 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:30 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	Authorization: [REDACTED]
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:30 GMT
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: d05b76eb-8141-46b7-5f9b-5403dbdb12e4
+CorrelationId: d05b76eb-8141-46b7-5f9b-5403dbdb12e4
+DEBUG: 2022/02/17 14:30:30 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:30 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: d4464d15-c263-4266-5fd0-0a4645f5cb49
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:30 GMT
+CorrelationId: d4464d15-c263-4266-5fd0-0a4645f5cb49
+DEBUG: 2022/02/17 14:30:30 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	Authorization: [REDACTED]
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:31 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:30 GMT
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: 0b5e5340-5d79-4330-6ffc-eb788919f3b0
+CorrelationId: 0b5e5340-5d79-4330-6ffc-eb788919f3b0
+DEBUG: 2022/02/17 14:30:31 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+	User-Agent: GC Terraform Provider/1.1.0
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:31 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	Authorization: [REDACTED]
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Length: 147
+	Inin-Correlation-Id: 715f9e00-8092-4ad0-42b3-5b24f257b604
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:31 GMT
+	Content-Type: application/json
+CorrelationId: 715f9e00-8092-4ad0-42b3-5b24f257b604
+DEBUG: 2022/02/17 14:30:31 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:31 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Date: Thu, 17 Feb 2022 19:30:31 GMT
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: 4b956447-f3f7-4b4e-6465-b00c51984145
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+CorrelationId: 4b956447-f3f7-4b4e-6465-b00c51984145
+DEBUG: 2022/02/17 14:30:31 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:32 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: a3bf4466-9e3e-448c-5602-ba3d1d8e3885
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:32 GMT
+CorrelationId: a3bf4466-9e3e-448c-5602-ba3d1d8e3885
+DEBUG: 2022/02/17 14:30:32 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+	User-Agent: GC Terraform Provider/1.1.0
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:32 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Inin-Correlation-Id: 26a33ca6-27f9-4c8b-7c29-d127ed090f79
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:32 GMT
+	Content-Type: application/json
+	Content-Length: 147
+CorrelationId: 26a33ca6-27f9-4c8b-7c29-d127ed090f79
+DEBUG: 2022/02/17 14:30:32 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:33 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Length: 147
+	Inin-Correlation-Id: 508a9e2b-a141-4ad6-62c4-79dcab9752ca
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:33 GMT
+	Content-Type: application/json
+CorrelationId: 508a9e2b-a141-4ad6-62c4-79dcab9752ca
+DEBUG: 2022/02/17 14:30:33 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:34 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	Authorization: [REDACTED]
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:34 GMT
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: 7f9be59e-b82c-4c66-45a3-a955513cd7c4
+	Strict-Transport-Security: max-age=7776000
+CorrelationId: 7f9be59e-b82c-4c66-45a3-a955513cd7c4
+DEBUG: 2022/02/17 14:30:34 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:35 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Inin-Correlation-Id: af14550c-ca9a-43b9-7b93-dcdd3c07e260
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:35 GMT
+	Content-Type: application/json
+	Content-Length: 147
+CorrelationId: af14550c-ca9a-43b9-7b93-dcdd3c07e260
+DEBUG: 2022/02/17 14:30:35 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:35 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Type: application/json
+	Content-Length: 147
+	Inin-Correlation-Id: 190f49a4-6870-437c-751a-b45f86a4d6eb
+	Strict-Transport-Security: max-age=7776000
+	Vary: Accept-Encoding
+	Date: Thu, 17 Feb 2022 19:30:35 GMT
+CorrelationId: 190f49a4-6870-437c-751a-b45f86a4d6eb
+DEBUG: 2022/02/17 14:30:35 
+=== REQUEST ===
+URL: https://login.usw2.pure.cloud/oauth/token
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/x-www-form-urlencoded
+	Authorization: [REDACTED]
+Body: grant_type=client_credentials
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:35 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/credentials
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+	Authorization: [REDACTED]
+	Accept: application/json
+Body: {"name":"dev-dude-order-status-LambdaIntegrationCredentials","type":{"name":"amazonWebServicesARN"},"credentialFields":{"ARN":"arn:aws:iam::435681138675:role/dev-dude-order-status-TrustRole"}}
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Via: 1.1 dc63e27eb9e0d028d529c3363bbe2e22.cloudfront.net (CloudFront)
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: 5N9xMwxj41DaafIo7K9dyGCmImtS-jU7Qzq2I8sBYoUeRUt0qL-ecA==
+	Content-Type: application/json
+	Date: Thu, 17 Feb 2022 19:30:35 GMT
+	Inin-Correlation-Id: 7bc8fa3c-a932-4c6c-89df-cf20d65529a9
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Cache: Miss from cloudfront
+CorrelationId: 7bc8fa3c-a932-4c6c-89df-cf20d65529a9
+DEBUG: 2022/02/17 14:30:35 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/credentials
+Method: POST
+Headers: 
+	Authorization: [REDACTED]
+	Accept: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+Body: {"name":"dev-dude-order-status-LambdaIntegrationCredentials","type":{"name":"amazonWebServicesARN"},"credentialFields":{"ARN":"arn:aws:iam::435681138675:role/dev-dude-order-status-TrustRole"}}
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:35 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues
+Method: POST
+Headers: 
+	Accept: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+	Authorization: [REDACTED]
+Body: {"name":"dude-general-support","description":"dude-general-support questions and answers","mediaSettings":{},"routingRules":null,"acwSettings":{"wrapupPrompt":"MANDATORY_TIMEOUT","timeoutMs":300000},"skillEvaluationMethod":"BEST","autoAnswerOnly":true,"enableTranscription":true,"enableManualAssignment":true,"callingPartyName":"","callingPartyNumber":""}
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Amz-Cf-Id: _U4OkUyqRUgbb6cv0_ZgpfA_g1Go_EnxtPqllUBDxbEO7g_Hrzw7yQ==
+	Content-Type: application/json
+	Date: Thu, 17 Feb 2022 19:30:35 GMT
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Inin-Correlation-Id: c68f97d8-f838-4ec7-ba5c-67d3c0c5db57
+	X-Cache: Miss from cloudfront
+	Via: 1.1 4eb6db543899d63048055031c3411b00.cloudfront.net (CloudFront)
+	X-Amz-Cf-Pop: ATL51-C1
+CorrelationId: c68f97d8-f838-4ec7-ba5c-67d3c0c5db57
+DEBUG: 2022/02/17 14:30:35 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+	Authorization: [REDACTED]
+	Accept: application/json
+Body: {"name":"dude-general-support","description":"dude-general-support questions and answers","mediaSettings":{},"routingRules":null,"acwSettings":{"wrapupPrompt":"MANDATORY_TIMEOUT","timeoutMs":300000},"skillEvaluationMethod":"BEST","autoAnswerOnly":true,"enableTranscription":true,"enableManualAssignment":true,"callingPartyName":"","callingPartyNumber":""}
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:35 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues
+Method: POST
+Headers: 
+	Authorization: [REDACTED]
+	Accept: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+Body: {"name":"dude-cancellations","description":"dude-cancellations questions and answers","mediaSettings":{},"routingRules":null,"acwSettings":{"wrapupPrompt":"MANDATORY_TIMEOUT","timeoutMs":300000},"skillEvaluationMethod":"BEST","autoAnswerOnly":true,"enableTranscription":true,"enableManualAssignment":true,"callingPartyName":"","callingPartyNumber":""}
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Type: application/json
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Cache: Miss from cloudfront
+	Via: 1.1 3348e21d56f028d9bb078f3a5940584c.cloudfront.net (CloudFront)
+	Date: Thu, 17 Feb 2022 19:30:35 GMT
+	Inin-Correlation-Id: c7d498fb-6a87-4fa5-84e5-f6cfef35a487
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: kejzZ8tO-lwRkEXo0CnUPhJLMpKyDH6wA4XWhjt0JgvOwA8cD9OfMw==
+CorrelationId: c7d498fb-6a87-4fa5-84e5-f6cfef35a487
+DEBUG: 2022/02/17 14:30:35 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues
+Method: POST
+Headers: 
+	Authorization: [REDACTED]
+	Accept: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+Body: {"name":"dude-cancellations","description":"dude-cancellations questions and answers","mediaSettings":{},"routingRules":null,"acwSettings":{"wrapupPrompt":"MANDATORY_TIMEOUT","timeoutMs":300000},"skillEvaluationMethod":"BEST","autoAnswerOnly":true,"enableTranscription":true,"enableManualAssignment":true,"callingPartyName":"","callingPartyNumber":""}
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:36 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues/427158b6-cf46-4352-930b-902bed3e36de
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	Accept: application/json
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Cache: Miss from cloudfront
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: FE87GqEGJRCd6_L1uM2r2ZMgRVPKTykq8Ik9Xac6JEZuhPbDsLdN8w==
+	Content-Type: application/json
+	Date: Thu, 17 Feb 2022 19:30:36 GMT
+	Inin-Correlation-Id: 95f583d8-52bc-4733-8546-16de9be5b561
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Via: 1.1 68536efcab2672b0482f05414de9f06c.cloudfront.net (CloudFront)
+CorrelationId: 95f583d8-52bc-4733-8546-16de9be5b561
+DEBUG: 2022/02/17 14:30:36 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues/427158b6-cf46-4352-930b-902bed3e36de
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	Accept: application/json
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:36 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues/427158b6-cf46-4352-930b-902bed3e36de/members?pageNumber=1&pageSize=100
+Method: GET
+Headers: 
+	Accept: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+=== RESPONSE ===
+Status: 200
+Headers: 
+	X-Cache: Miss from cloudfront
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: hlTmja1lE3UBht6TI7q_sdlYbCjoGm6_C_jkHNFz6PjS7IPKj3JvBQ==
+	Content-Type: application/json
+	Date: Thu, 17 Feb 2022 19:30:36 GMT
+	Inin-Correlation-Id: c8197163-d380-4c1a-a26d-5fb528a41fb9
+	Via: 1.1 24990d51e53375dffbe8411f5e14f578.cloudfront.net (CloudFront)
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Cache-Control: no-cache, no-store, must-revalidate
+CorrelationId: c8197163-d380-4c1a-a26d-5fb528a41fb9
+DEBUG: 2022/02/17 14:30:36 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues/427158b6-cf46-4352-930b-902bed3e36de/members?pageNumber=1&pageSize=100
+Method: GET
+Headers: 
+	Content-Type: application/json
+	Accept: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:36 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/credentials/da8f70fa-60cd-48a0-a41b-ab26d4603307
+Method: GET
+Headers: 
+	Accept: application/json
+	Authorization: [REDACTED]
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Type: application/json
+	Date: Thu, 17 Feb 2022 19:30:36 GMT
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Via: 1.1 b0cbf3ff399b82fca26af1186509acfa.cloudfront.net (CloudFront)
+	X-Amz-Cf-Pop: ATL51-C1
+	Inin-Correlation-Id: f9d66cb3-02ee-4a02-a8c7-d2d6e5c5362e
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Cache: Miss from cloudfront
+	X-Amz-Cf-Id: cTcCN67AAVVQkl0BJZOR8eLDDhvBeCHWTY0dGxMxb3fBFM-fLSR6Vg==
+CorrelationId: f9d66cb3-02ee-4a02-a8c7-d2d6e5c5362e
+DEBUG: 2022/02/17 14:30:36 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/credentials/da8f70fa-60cd-48a0-a41b-ab26d4603307
+Method: GET
+Headers: 
+	Accept: application/json
+	Authorization: [REDACTED]
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:36 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues/2f419b99-3c78-4338-9f96-5b56971f85bb
+Method: GET
+Headers: 
+	Accept: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Cache-Control: no-cache, no-store, must-revalidate
+	Via: 1.1 b0cbf3ff399b82fca26af1186509acfa.cloudfront.net (CloudFront)
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: PcHd_wuOxtDmrE-y0ASdElG13VG_R4SrfgNQxY9hFTRRhnl65P60lg==
+	Content-Type: application/json
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Inin-Correlation-Id: baf71e3a-b4a2-4688-8275-c54b3cfd982c
+	X-Cache: Miss from cloudfront
+	Date: Thu, 17 Feb 2022 19:30:36 GMT
+CorrelationId: baf71e3a-b4a2-4688-8275-c54b3cfd982c
+DEBUG: 2022/02/17 14:30:36 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues/2f419b99-3c78-4338-9f96-5b56971f85bb
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	Accept: application/json
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:37 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues/427158b6-cf46-4352-930b-902bed3e36de/wrapupcodes?pageSize=100&pageNumber=1
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	Accept: application/json
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Type: application/json
+	Date: Thu, 17 Feb 2022 19:30:36 GMT
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Amz-Cf-Id: WCTE-dSrGzRGWnSKeIoMJdUaJRHPasxjTEBS98sclN2OPnXpS2OWTQ==
+	Inin-Correlation-Id: aef4c4bc-6416-4db5-a144-4593ec5ddf0c
+	X-Cache: Miss from cloudfront
+	Via: 1.1 52e2243a8168629f98bb0607016f7224.cloudfront.net (CloudFront)
+	X-Amz-Cf-Pop: ATL51-C1
+CorrelationId: aef4c4bc-6416-4db5-a144-4593ec5ddf0c
+DEBUG: 2022/02/17 14:30:37 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues/427158b6-cf46-4352-930b-902bed3e36de/wrapupcodes?pageSize=100&pageNumber=1
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	Accept: application/json
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:37 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues/2f419b99-3c78-4338-9f96-5b56971f85bb/members?pageSize=100&pageNumber=1
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	Accept: application/json
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Type: application/json
+	Date: Thu, 17 Feb 2022 19:30:37 GMT
+	Inin-Correlation-Id: 3dc0d359-bae0-411c-9078-2a45c5d65131
+	Cache-Control: no-cache, no-store, must-revalidate
+	Via: 1.1 ac4b98f2fa28f0028b6d571d0a37de84.cloudfront.net (CloudFront)
+	X-Amz-Cf-Pop: ATL51-C1
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	X-Cache: Miss from cloudfront
+	X-Amz-Cf-Id: _8OtLHgZMA_wvu3o7rPvK5k3uM_5r5yoRKRiBsg7C3fWzfecl5kadA==
+CorrelationId: 3dc0d359-bae0-411c-9078-2a45c5d65131
+DEBUG: 2022/02/17 14:30:37 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues/2f419b99-3c78-4338-9f96-5b56971f85bb/members?pageSize=100&pageNumber=1
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	Accept: application/json
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:37 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues/2f419b99-3c78-4338-9f96-5b56971f85bb/wrapupcodes?pageSize=100&pageNumber=1
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+	Accept: application/json
+	Authorization: [REDACTED]
+=== RESPONSE ===
+Status: 200
+Headers: 
+	X-Amz-Cf-Id: 1jRU7cozqfecy3vhB5KbBrP4nsQieoTLCwIumyLEoHMkDXR7s2oX-A==
+	Date: Thu, 17 Feb 2022 19:30:37 GMT
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Cache: Miss from cloudfront
+	Via: 1.1 c27b7f775f6d2d6a12ff746db02e575a.cloudfront.net (CloudFront)
+	X-Amz-Cf-Pop: ATL51-C1
+	Content-Type: application/json
+	Inin-Correlation-Id: 4efc864e-8dbc-4891-aab9-646557e2e937
+CorrelationId: 4efc864e-8dbc-4891-aab9-646557e2e937
+DEBUG: 2022/02/17 14:30:37 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/routing/queues/2f419b99-3c78-4338-9f96-5b56971f85bb/wrapupcodes?pageSize=100&pageNumber=1
+Method: GET
+Headers: 
+	Accept: application/json
+	Authorization: [REDACTED]
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:37 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations
+Method: POST
+Headers: 
+	Accept: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+	Authorization: [REDACTED]
+Body: {"integrationType":{"id":"aws-lambda-data-actions"}}
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Type: application/json
+	X-Cache: Miss from cloudfront
+	Via: 1.1 353760c441dc8d01e037336279926a5e.cloudfront.net (CloudFront)
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: i9xewJV58sBNUN95WY1pRLknvo2JKPStnM9rLspEKZUJswaJxFfXyw==
+	Date: Thu, 17 Feb 2022 19:30:37 GMT
+	Inin-Correlation-Id: 5cc4f0f9-0bc6-494f-b259-a1a126f10142
+	Strict-Transport-Security: max-age=600; includeSubDomains
+CorrelationId: 5cc4f0f9-0bc6-494f-b259-a1a126f10142
+DEBUG: 2022/02/17 14:30:37 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations
+Method: POST
+Headers: 
+	Content-Type: application/json
+	Authorization: [REDACTED]
+	Accept: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+Body: {"integrationType":{"id":"aws-lambda-data-actions"}}
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:37 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/dae8599b-77eb-480c-a972-206fba8e3274/config/current
+Method: GET
+Headers: 
+	Accept: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Inin-Correlation-Id: 8db775da-d6b6-42b4-9137-552d2080c6cb
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Cache-Control: no-cache, no-store, must-revalidate
+	Via: 1.1 c27b7f775f6d2d6a12ff746db02e575a.cloudfront.net (CloudFront)
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: t_EQ7oy_omR0e5JBUff9Fa4Bf1mxlp6vflsJQMk51aLXJ1GclNd76g==
+	Content-Type: application/json
+	Date: Thu, 17 Feb 2022 19:30:37 GMT
+	X-Cache: Miss from cloudfront
+CorrelationId: 8db775da-d6b6-42b4-9137-552d2080c6cb
+DEBUG: 2022/02/17 14:30:37 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/dae8599b-77eb-480c-a972-206fba8e3274/config/current
+Method: GET
+Headers: 
+	Content-Type: application/json
+	Accept: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:38 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/dae8599b-77eb-480c-a972-206fba8e3274/config/current
+Method: GET
+Headers: 
+	Accept: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+=== RESPONSE ===
+Status: 200
+Headers: 
+	X-Amz-Cf-Pop: ATL51-C1
+	Date: Thu, 17 Feb 2022 19:30:38 GMT
+	Inin-Correlation-Id: 73e734ac-55c7-4b80-9982-9b2673c9a667
+	Via: 1.1 dd5c717e4a763450b855beecbfdfc536.cloudfront.net (CloudFront)
+	X-Amz-Cf-Id: -Bs7TuTURHZ2ATvpBpUEsTiqjTOX7MAZk5PO2QN7luk8b_HfU7o_AQ==
+	Content-Type: application/json
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Cache: Miss from cloudfront
+CorrelationId: 73e734ac-55c7-4b80-9982-9b2673c9a667
+DEBUG: 2022/02/17 14:30:38 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/dae8599b-77eb-480c-a972-206fba8e3274/config/current
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	Accept: application/json
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:38 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/dae8599b-77eb-480c-a972-206fba8e3274/config/current
+Method: PUT
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+	Authorization: [REDACTED]
+	Accept: application/json
+Body: {"name":"dev-dude-order-status-Lambda-Integration","version":1,"properties":{},"advanced":{},"notes":"Integration created to invoke an AWS Lambda","credentials":{"AmazonWebServicesARN":{"id":"da8f70fa-60cd-48a0-a41b-ab26d4603307"}}}
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Type: application/json
+	Date: Thu, 17 Feb 2022 19:30:38 GMT
+	Inin-Correlation-Id: cd572f7d-8606-4b97-8088-afa9b54beedf
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	X-Amz-Cf-Pop: ATL51-C1
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Cache: Miss from cloudfront
+	Via: 1.1 eb05349809e3898c943c1b7717a43a10.cloudfront.net (CloudFront)
+	X-Amz-Cf-Id: ALY0K1sPIZW16YdDB8Fx5jMzk6Zx-LeOUcXcdB_yQaB07Tlv31s9dA==
+CorrelationId: cd572f7d-8606-4b97-8088-afa9b54beedf
+DEBUG: 2022/02/17 14:30:38 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/dae8599b-77eb-480c-a972-206fba8e3274/config/current
+Method: PUT
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+	Authorization: [REDACTED]
+	Accept: application/json
+Body: {"name":"dev-dude-order-status-Lambda-Integration","version":1,"properties":{},"advanced":{},"notes":"Integration created to invoke an AWS Lambda","credentials":{"AmazonWebServicesARN":{"id":"da8f70fa-60cd-48a0-a41b-ab26d4603307"}}}
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:38 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/dae8599b-77eb-480c-a972-206fba8e3274?pageSize=25&pageNumber=1
+Method: PATCH
+Headers: 
+	Content-Type: application/json
+	Authorization: [REDACTED]
+	Accept: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+Body: {"intendedState":"ENABLED"}
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Inin-Correlation-Id: 3f3f1fc6-02b2-4293-98fc-095bbb423d95
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: pjRUMH_ynwlDzQ4V5hZMu8etYJUqlyYy0dHAm_KiTbLJuEiDheCwGQ==
+	Content-Type: application/json
+	Date: Thu, 17 Feb 2022 19:30:38 GMT
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Cache: Miss from cloudfront
+	Via: 1.1 5c954353b2079c920cfb6b9e1a5fe37a.cloudfront.net (CloudFront)
+CorrelationId: 3f3f1fc6-02b2-4293-98fc-095bbb423d95
+DEBUG: 2022/02/17 14:30:38 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/dae8599b-77eb-480c-a972-206fba8e3274?pageSize=25&pageNumber=1
+Method: PATCH
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+	Authorization: [REDACTED]
+	Accept: application/json
+Body: {"intendedState":"ENABLED"}
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:41 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/dae8599b-77eb-480c-a972-206fba8e3274?pageSize=100&pageNumber=1
+Method: GET
+Headers: 
+	Content-Type: application/json
+	Accept: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Type: application/json
+	Date: Thu, 17 Feb 2022 19:30:41 GMT
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	X-Cache: Miss from cloudfront
+	Via: 1.1 dd5c717e4a763450b855beecbfdfc536.cloudfront.net (CloudFront)
+	X-Amz-Cf-Pop: ATL51-C1
+	Inin-Correlation-Id: d086cc6c-925f-4649-b6fe-2ebefa14ea6b
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Amz-Cf-Id: oVvjx_ZJk0O31BdWg-6lrpAnzavyTv1v32LkqyRl955kFnzrpy4MRw==
+CorrelationId: d086cc6c-925f-4649-b6fe-2ebefa14ea6b
+DEBUG: 2022/02/17 14:30:41 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/dae8599b-77eb-480c-a972-206fba8e3274?pageSize=100&pageNumber=1
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	Accept: application/json
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:41 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/dae8599b-77eb-480c-a972-206fba8e3274/config/current
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Accept: application/json
+	Authorization: [REDACTED]
+	Content-Type: application/json
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Via: 1.1 d1f0efbb41ff04939eb0644728811270.cloudfront.net (CloudFront)
+	Date: Thu, 17 Feb 2022 19:30:41 GMT
+	Inin-Correlation-Id: 23f876c2-699f-44ee-8bc0-173e83c3f224
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Cache: Miss from cloudfront
+	Content-Type: application/json
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: -AEwP2kbVR7F9Kem1ZfqmnWqfMiZNEThUnU2zGBnBg6Pt9bpRgzyTg==
+CorrelationId: 23f876c2-699f-44ee-8bc0-173e83c3f224
+DEBUG: 2022/02/17 14:30:41 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/dae8599b-77eb-480c-a972-206fba8e3274/config/current
+Method: GET
+Headers: 
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+	Accept: application/json
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:30:59 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/actions
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+	Authorization: [REDACTED]
+	Accept: application/json
+Body: {"name":"dev-dude-order-status-data-action","category":"dev-dude-order-status-Lambda","integrationId":"dae8599b-77eb-480c-a972-206fba8e3274","secure":false,"config":{"request":{"requestUrlTemplate":"arn:aws:lambda:us-west-2:435681138675:function:dev-dude-order-status-lambda","requestTemplate":"","requestType":"POST","headers":{}},"response":{"translationMap":{},"translationMapDefaults":{},"successTemplate":"${rawResult}"}},"contract":{"output":{"successSchema":{"additionalProperties":true,"properties":{"CustomerFirstName":{"type":"string"},"CustomerId":{"type":"string"},"CustomerLastName":{"type":"string"},"OrderNumber":{"type":"string"},"OrderStatus":{"type":"string"}},"title":"OrderResponse","type":"object"}},"input":{"inputSchema":{"additionalProperties":true,"properties":{"OrderNumber":{"type":"string"}},"title":"OrderRequest","type":"object"}}}}
+=== RESPONSE ===
+Status: 201
+Headers: 
+	Via: 1.1 10ced671660307db6eedacb69410d18e.cloudfront.net (CloudFront)
+	Content-Type: application/json
+	Date: Thu, 17 Feb 2022 19:30:59 GMT
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Cache: Miss from cloudfront
+	Inin-Correlation-Id: ce28ef2e-0267-41fd-8068-0777d3ef41b7
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: 017bG4zMgYPz8fnSyNyRoa_VQwDo7a8pZcy-BieDuBO0OfigRPGIkQ==
+CorrelationId: ce28ef2e-0267-41fd-8068-0777d3ef41b7
+DEBUG: 2022/02/17 14:30:59 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/actions
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+	Authorization: [REDACTED]
+	Accept: application/json
+Body: {"name":"dev-dude-order-status-data-action","category":"dev-dude-order-status-Lambda","integrationId":"dae8599b-77eb-480c-a972-206fba8e3274","secure":false,"config":{"request":{"requestUrlTemplate":"arn:aws:lambda:us-west-2:435681138675:function:dev-dude-order-status-lambda","requestTemplate":"","requestType":"POST","headers":{}},"response":{"translationMap":{},"translationMapDefaults":{},"successTemplate":"${rawResult}"}},"contract":{"output":{"successSchema":{"additionalProperties":true,"properties":{"CustomerFirstName":{"type":"string"},"CustomerId":{"type":"string"},"CustomerLastName":{"type":"string"},"OrderNumber":{"type":"string"},"OrderStatus":{"type":"string"}},"title":"OrderResponse","type":"object"}},"input":{"inputSchema":{"additionalProperties":true,"properties":{"OrderNumber":{"type":"string"}},"title":"OrderRequest","type":"object"}}}}
+=== RESPONSE ===
+Status: 201
+TRACE: 2022/02/17 14:30:59 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/actions/custom_-_eddc6bb0-1517-4b78-982a-4fd9fa60bf4f?includeConfig=true&expand=contract
+Method: GET
+Headers: 
+	Accept: application/json
+	Authorization: [REDACTED]
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Type: application/json
+	Cache-Control: no-cache, no-store, must-revalidate
+	Via: 1.1 0776a2d1584992df9d9a926204e27622.cloudfront.net (CloudFront)
+	X-Amz-Cf-Id: Vp-hjDjkZiGKk8WJ7cFTwmfsGv48AWhyVhQw_CJNy44io7cZuJZYfg==
+	Date: Thu, 17 Feb 2022 19:30:59 GMT
+	Inin-Correlation-Id: e55a523e-0215-4d5d-b972-97474fbd8e41
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	X-Cache: Miss from cloudfront
+	X-Amz-Cf-Pop: ATL51-C1
+CorrelationId: e55a523e-0215-4d5d-b972-97474fbd8e41
+DEBUG: 2022/02/17 14:30:59 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/actions/custom_-_eddc6bb0-1517-4b78-982a-4fd9fa60bf4f?includeConfig=true&expand=contract
+Method: GET
+Headers: 
+	Content-Type: application/json
+	Accept: application/json
+	Authorization: [REDACTED]
+	User-Agent: GC Terraform Provider/1.1.0
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:31:00 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/actions/custom_-_eddc6bb0-1517-4b78-982a-4fd9fa60bf4f/templates/requesttemplate.vm
+Method: GET
+Headers: 
+	Accept: */*
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+=== RESPONSE ===
+Status: 200
+Headers: 
+	X-Amz-Cf-Pop: ATL51-C1
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Via: 1.1 c403373b316e0bf7f3a326c1ff50549e.cloudfront.net (CloudFront)
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Cache: Miss from cloudfront
+	X-Amz-Cf-Id: iCW0BlQWXVjk5ZJPBl8v0-mKmPIWZTIABk8POqUQHoqqVLhd7fUFZA==
+	Content-Type: text/plain
+	Date: Thu, 17 Feb 2022 19:30:59 GMT
+	Inin-Correlation-Id: 80ccf5f2-4bec-4738-bf15-563443b2daa5
+CorrelationId: 80ccf5f2-4bec-4738-bf15-563443b2daa5
+DEBUG: 2022/02/17 14:31:00 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/actions/custom_-_eddc6bb0-1517-4b78-982a-4fd9fa60bf4f/templates/requesttemplate.vm
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	Accept: */*
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:31:00 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/actions/custom_-_eddc6bb0-1517-4b78-982a-4fd9fa60bf4f/templates/successtemplate.vm
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	Accept: */*
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Date: Thu, 17 Feb 2022 19:31:00 GMT
+	Inin-Correlation-Id: 308d0210-16c0-47ff-9c38-1dd243ed8926
+	X-Cache: Miss from cloudfront
+	Content-Type: text/plain
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Cache-Control: no-cache, no-store, must-revalidate
+	Via: 1.1 3348e21d56f028d9bb078f3a5940584c.cloudfront.net (CloudFront)
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: iuqtmj0rMpEA0gBuwrR4CnhAbyrUO15vaOTqzek7BRD5kH1i1oOPjw==
+CorrelationId: 308d0210-16c0-47ff-9c38-1dd243ed8926
+DEBUG: 2022/02/17 14:31:00 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/integrations/actions/custom_-_eddc6bb0-1517-4b78-982a-4fd9fa60bf4f/templates/successtemplate.vm
+Method: GET
+Headers: 
+	Accept: */*
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:31:32 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/flows?pageSize=10&includeSchemas=false&deleted=false&name=DudeWheresMyStuffChat&pageNumber=1
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	Accept: application/json
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Type: application/json
+	Date: Thu, 17 Feb 2022 19:31:32 GMT
+	Inin-Correlation-Id: 61674ea0-9019-4185-b7c8-e41c7600fae8
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Cache: Miss from cloudfront
+	Via: 1.1 363cad48d8e3402b6707734c1873c9d6.cloudfront.net (CloudFront)
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: _4-ajxSBeLxAX17wKfD3lr6gL2isJ14wB7a-ljT9NAgV4_08t6_kNQ==
+CorrelationId: 61674ea0-9019-4185-b7c8-e41c7600fae8
+DEBUG: 2022/02/17 14:31:32 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/flows?pageSize=10&includeSchemas=false&deleted=false&name=DudeWheresMyStuffChat&pageNumber=1
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	Accept: application/json
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:31:33 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/widgets/deployments
+Method: GET
+Headers: 
+	Content-Type: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+	Accept: application/json
+	Authorization: [REDACTED]
+=== RESPONSE ===
+Status: 200
+Headers: 
+	X-Cache: Miss from cloudfront
+	Via: 1.1 1280ed2b25df326a730453b28b0f9aaa.cloudfront.net (CloudFront)
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: nvqK4SOAqnSWqz7dk_e3II2ZKG6rHGbgYsgFQ75js__Y3Om_18qoGA==
+	Inin-Correlation-Id: d5068112-7984-430f-b193-5d1774b2e8ad
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Cache-Control: no-cache, no-store, must-revalidate
+	Content-Type: application/json
+	Date: Thu, 17 Feb 2022 19:31:33 GMT
+CorrelationId: d5068112-7984-430f-b193-5d1774b2e8ad
+DEBUG: 2022/02/17 14:31:33 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/widgets/deployments
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Accept: application/json
+	Authorization: [REDACTED]
+	Content-Type: application/json
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:31:38 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/widgets/deployments
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+	Authorization: [REDACTED]
+	Accept: application/json
+Body: {"name":"dev-dude-order-status-chat-widget","description":"My chat widget","authenticationRequired":false,"disabled":false,"flow":{"id":"14a39819-3e09-49f0-a139-ba37d19ea87b"},"allowedDomains":[],"clientType":"v2","clientConfig":{}}
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Cache: Miss from cloudfront
+	Date: Thu, 17 Feb 2022 19:31:37 GMT
+	Inin-Correlation-Id: 0e641a07-2aba-4482-b394-5df9f7c31b50
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Via: 1.1 af4b82f24e15a32a618ba4f9be9cbf92.cloudfront.net (CloudFront)
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: ej-OyAXagfTix2Keq3hBjHM8Ygqa5UvXxDWC4Ol9sp9BUXDgqQtNng==
+	Content-Type: application/json
+CorrelationId: 0e641a07-2aba-4482-b394-5df9f7c31b50
+DEBUG: 2022/02/17 14:31:38 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/widgets/deployments
+Method: POST
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Content-Type: application/json
+	Authorization: [REDACTED]
+	Accept: application/json
+Body: {"name":"dev-dude-order-status-chat-widget","description":"My chat widget","authenticationRequired":false,"disabled":false,"flow":{"id":"14a39819-3e09-49f0-a139-ba37d19ea87b"},"allowedDomains":[],"clientType":"v2","clientConfig":{}}
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:31:41 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/widgets/deployments
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	Accept: application/json
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Inin-Correlation-Id: abeeb42d-a8f1-424e-89d8-3716cf67b80a
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Cache: Miss from cloudfront
+	Via: 1.1 c403373b316e0bf7f3a326c1ff50549e.cloudfront.net (CloudFront)
+	Content-Type: application/json
+	Date: Thu, 17 Feb 2022 19:31:41 GMT
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: uxbyLayxb1_K722_xWiSoHDc2rlFmvJfQ3mMra-WMEGNyztNLw6qTg==
+CorrelationId: abeeb42d-a8f1-424e-89d8-3716cf67b80a
+DEBUG: 2022/02/17 14:31:41 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/widgets/deployments
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	Accept: application/json
+=== RESPONSE ===
+Status: 200
+TRACE: 2022/02/17 14:31:41 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/widgets/deployments/f95afb2e-eec4-416e-86f2-336fd88db8e5
+Method: GET
+Headers: 
+	Authorization: [REDACTED]
+	Content-Type: application/json
+	User-Agent: GC Terraform Provider/1.1.0
+	Accept: application/json
+=== RESPONSE ===
+Status: 200
+Headers: 
+	Content-Type: application/json
+	Cache-Control: no-cache, no-store, must-revalidate
+	X-Cache: Miss from cloudfront
+	X-Amz-Cf-Pop: ATL51-C1
+	X-Amz-Cf-Id: KGQJcWkPlJ6FucizBO7nf0herrIRVgoSSbVp6vI3bvu3YuzIqzL_dA==
+	Date: Thu, 17 Feb 2022 19:31:41 GMT
+	Inin-Correlation-Id: a90915e1-198d-407f-94ca-2dcdea1d8111
+	Strict-Transport-Security: max-age=600; includeSubDomains
+	Via: 1.1 5c954353b2079c920cfb6b9e1a5fe37a.cloudfront.net (CloudFront)
+CorrelationId: a90915e1-198d-407f-94ca-2dcdea1d8111
+DEBUG: 2022/02/17 14:31:41 
+=== REQUEST ===
+URL: https://api.usw2.pure.cloud/api/v2/widgets/deployments/f95afb2e-eec4-416e-86f2-336fd88db8e5
+Method: GET
+Headers: 
+	User-Agent: GC Terraform Provider/1.1.0
+	Accept: application/json
+	Authorization: [REDACTED]
+	Content-Type: application/json
+=== RESPONSE ===
+Status: 200
