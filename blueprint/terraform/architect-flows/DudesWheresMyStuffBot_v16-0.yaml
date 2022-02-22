@@ -1,6 +1,5 @@
 botFlow:
   name: DudesWheresMyStuffBot
-  division: Home
   startUpRef: "/botFlow/bots/bot[WheresMyStuffBot_10]"
   defaultLanguage: en-us
   supportedLanguages:

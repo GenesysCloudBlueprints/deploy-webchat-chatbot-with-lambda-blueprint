@@ -1,7 +1,6 @@
 inboundChat:
   name: DudeWheresMyStuffChat
   description: Chat bot for Dude Wheres My Stuff
-  division: Home
   startUpRef: "/inboundChat/states/state[Initial State_20]"
   defaultLanguage: en-us
   supportedLanguages:
