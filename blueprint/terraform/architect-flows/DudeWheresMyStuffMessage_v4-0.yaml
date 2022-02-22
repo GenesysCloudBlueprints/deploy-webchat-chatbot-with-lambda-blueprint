@@ -1,7 +1,6 @@
 inboundShortMessage:
   name: DudeWheresMyStuffMessage
   description: Message Based Chat Flow
-  division: Home
   startUpRef: "/inboundShortMessage/states/state[Initial State_10]"
   defaultLanguage: en-us
   supportedLanguages:
