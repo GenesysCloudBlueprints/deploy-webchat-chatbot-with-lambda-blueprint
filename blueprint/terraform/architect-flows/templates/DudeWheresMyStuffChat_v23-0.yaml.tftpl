@@ -1,20 +1,27 @@
-inboundShortMessage:
-  name: DudeWheresMyStuffMessage
-  description: Message Based Chat Flow
-  startUpRef: "/inboundShortMessage/states/state[Initial State_10]"
+inboundChat:
+  name: DudeWheresMyStuffChat
+  description: Chat bot for Dude Wheres My Stuff
+  startUpRef: "/inboundChat/states/state[Initial State_20]"
   defaultLanguage: en-us
   supportedLanguages:
     en-us:
       defaultLanguageSkill:
         noValue: true
+  variables:
+    - queueVariable:
+        name: Flow.legacyQueue
+        initialValue:
+          noValue: true
   settingsErrorHandling:
     errorHandling:
-      disconnect:
-        none: true
+      queue:
+        targetQueue:
+          lit:
+            name: dude-general-support
   states:
     - state:
         name: Initial State
-        refId: Initial State_10
+        refId: Initial State_20
         variables:
           - stringVariable:
               name: State.ChatFirstName
@@ -91,18 +98,26 @@ inboundShortMessage:
                         value:
                           exp: State.TheIntent=="Check Order Status"
                         actions:
+                          - setParticipantData:
+                              name: Set Participant Data
+                              attributes:
+                                - attribute:
+                                    name:
+                                      lit: OrderNumber
+                                    value:
+                                      exp: State.OrderNumber
                           - callData:
                               name: Call Data Action
                               timeout:
                                 lit:
                                   minutes: 1
                               category:
-                                dev-dude-order-status-Lambda:
+                                ${integration_category}:
                                   dataAction:
-                                    dev-dude-order-status-data-action:
+                                    ${integration_data_action_name}:
                                       inputs:
                                         OrderNumber:
-                                          noValue: true
+                                          exp: State.OrderNumber
                                       successOutputs:
                                         CustomerFirstName:
                                           var: State.CustomerFirstName
@@ -144,30 +159,18 @@ inboundShortMessage:
                               outputs:
                                 success:
                                   actions:
-                                    - setParticipantData:
-                                        name: Set Participant Data
-                                        attributes:
-                                          - attribute:
-                                              name:
-                                                lit: OrderNumber
-                                              value:
-                                                exp: State.OrderNumber
                                     - sendResponse:
                                         name: Send Response
+                                        messageBodyStyle:
+                                          lit: notice
                                         messageBody:
                                           exp: "Trim(Append(\n    ToDisplayString(Append(\"Hi \", State.ChatFirstName, \", \")), \n    If(IsNotSetOrEmpty(ToDisplayString(Append(\"Hi \", State.ChatFirstName, \", \"))), \"\", \" \"), \n    ToDisplayString(Append(\"Thanks for reaching out to us about order #: \", State.OrderNumber)), \n    If(IsNotSetOrEmpty(ToDisplayString(Append(\"Thanks for reaching out to us about order #: \", State.OrderNumber))), \"\", \" \"), \n    ToDisplayString(Append(\"The status of the order is \", State.OrderStatus))))"
                                 failure:
                                   actions:
-                                    - setParticipantData:
-                                        name: Set Participant Data
-                                        attributes:
-                                          - attribute:
-                                              name:
-                                                lit: OrderNumber
-                                              value:
-                                                exp: State.OrderNumber
                                     - sendResponse:
                                         name: Send Response
+                                        messageBodyStyle:
+                                          lit: notice
                                         messageBody:
                                           exp: "Trim(Append(\n    ToDisplayString(Append(\"Hi \", State.ChatFirstName)), \n    If(IsNotSetOrEmpty(ToDisplayString(Append(\"Hi \", State.ChatFirstName))), \"\", \" \"), \n    ToDisplayString(Append(\"We had some trouble looking up order #: \", State.OrderNumber)), \n    If(IsNotSetOrEmpty(ToDisplayString(Append(\"We had some trouble looking up order #: \", State.OrderNumber))), \"\", \" \"), \n    \"Sit tight, while I get an agent who can help with this situation.\"))"
                                     - transferToAcd:
@@ -185,16 +188,10 @@ inboundShortMessage:
                                   actions:
                                     - sendResponse:
                                         name: Send Response
+                                        messageBodyStyle:
+                                          lit: notice
                                         messageBody:
                                           exp: "Trim(Append(\n    ToDisplayString(Append(\"Hi \", State.ChatFirstName, \"We had problems looking up order number: \", State.OrderNumber)), \n    If(IsNotSetOrEmpty(ToDisplayString(Append(\"Hi \", State.ChatFirstName, \"We had problems looking up order number: \", State.OrderNumber))), \"\", \" \"), \n    \"Please sit tight and I am getting an agent to help sort this out.\"))"
-                                    - setParticipantData:
-                                        name: Set Participant Data
-                                        attributes:
-                                          - attribute:
-                                              name:
-                                                lit: OrderNumber
-                                              value:
-                                                exp: State.OrderNumber
                                     - transferToAcd:
                                         name: Transfer to ACD
                                         targetQueue:
@@ -210,10 +207,6 @@ inboundShortMessage:
                         value:
                           exp: State.TheIntent=="Cancel my order"
                         actions:
-                          - sendResponse:
-                              name: Send Response
-                              messageBody:
-                                exp: "Trim(Append(\n    ToDisplayString(Append(\"Hi \", State.ChatFirstName)), \n    If(IsNotSetOrEmpty(ToDisplayString(Append(\"Hi \", State.ChatFirstName))), \"\", \" \"), \n    ToDisplayString(Append(\"I am sorry you want to cancel order number #\", State.OrderNumber)), \n    If(IsNotSetOrEmpty(ToDisplayString(Append(\"I am sorry you want to cancel order number #\", State.OrderNumber))), \"\", \" \"), \n    \"Let me get you an agent to assist you with this right away.\"))"
                           - setParticipantData:
                               name: Set Participant Data
                               attributes:
@@ -222,11 +215,17 @@ inboundShortMessage:
                                       lit: OrderNumber
                                     value:
                                       exp: State.OrderNumber
+                          - sendResponse:
+                              name: Send Response
+                              messageBodyStyle:
+                                lit: notice
+                              messageBody:
+                                exp: "Trim(Append(\n    ToDisplayString(Append(\"Hi \", State.ChatFirstName)), \n    If(IsNotSetOrEmpty(ToDisplayString(Append(\"Hi \", State.ChatFirstName))), \"\", \" \"), \n    ToDisplayString(Append(\"I am sorry you want to cancel order number #\", State.OrderNumber)), \n    If(IsNotSetOrEmpty(ToDisplayString(Append(\"I am sorry you want to cancel order number #\", State.OrderNumber))), \"\", \" \"), \n    \"Let me get you an agent to assist you with this right away.\"))"
                           - transferToAcd:
                               name: Transfer to ACD
                               targetQueue:
                                 lit:
-                                  name: dude-general-support
+                                  name: dude-cancellations
                               priority:
                                 lit: 0
                               preferredAgents:
@@ -237,8 +236,18 @@ inboundShortMessage:
                         value:
                           exp: State.TheIntent=="Order Questions"
                         actions:
+                          - setParticipantData:
+                              name: Set Participant Data
+                              attributes:
+                                - attribute:
+                                    name:
+                                      lit: OrderNumber
+                                    value:
+                                      exp: State.OrderNumber
                           - sendResponse:
                               name: Send Response
+                              messageBodyStyle:
+                                lit: notice
                               messageBody:
                                 lit: What is the sound of a server crashing?
                           - transferToAcd:
@@ -254,3 +263,68 @@ inboundShortMessage:
                                 noValue: true
           - disconnect:
               name: Disconnect
+  tasks:
+    - task:
+        name: Find Legacy Queue
+        refId: Find Legacy Queue_11
+        variables:
+          - integerVariable:
+              name: Task.chatGuestCustomFieldsIndex
+              initialValue:
+                noValue: true
+          - stringVariable:
+              name: Task.targetQueueIdOrName
+              initialValue:
+                noValue: true
+        actions:
+          - loop:
+              name: Loop through Chat.Guest.customFields
+              currentIndex:
+                var: Task.chatGuestCustomFieldsIndex
+              loopCount:
+                exp: Count(Chat.Guest.customFields)
+              outputs:
+                loop:
+                  actions:
+                    - decision:
+                        name: Legacy routing custom field found?
+                        condition:
+                          exp: AreEqual("context.genesys.legacyRoutingTargetQueueAddress", Chat.Guest.customFields[Task.chatGuestCustomFieldsIndex].key) or AreEqual("genesys.legacyRoutingTargetQueueAddress", Chat.Guest.customFields[Task.chatGuestCustomFieldsIndex].key)
+                        outputs:
+                          yes:
+                            actions:
+                              - updateData:
+                                  name: Save queue ID/name to variable
+                                  statements:
+                                    - string:
+                                        variable: Task.targetQueueIdOrName
+                                        value:
+                                          exp: Chat.Guest.customFields[Task.chatGuestCustomFieldsIndex].value
+                              - loopExit:
+                                  name: Exit Loop
+          - decision:
+              name: Queue ID/name found?
+              condition:
+                exp: "!IsNotSetOrEmpty(Task.targetQueueIdOrName)"
+              outputs:
+                yes:
+                  actions:
+                    - findQueueById:
+                        name: Find queue based on ID
+                        findId:
+                          exp: Task.targetQueueIdOrName
+                        findResult:
+                          var: Flow.legacyQueue
+                        outputs:
+                          notFound:
+                            actions:
+                              - findQueue:
+                                  name: Find queue based on name
+                                  findName:
+                                    exp: Task.targetQueueIdOrName
+                                  findResult:
+                                    var: Flow.legacyQueue
+          - endTask:
+              name: End Task
+              outputPath:
+                name: Default

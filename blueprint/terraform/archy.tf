@@ -1,3 +1,10 @@
+resource "local_file" "transform-message-bot-flow" {
+  content = templatefile("architect-flows/templates/DudeWheresMyStuffChat_v23-0.yaml.tftpl",
+    { integration_category = module.lambda_data_action.integration_data_action_category,
+  integration_data_action_name = module.lambda_data_action.integration_data_action_name })
+  filename = "architect-flows/DudeWheresMyStuffChat_v23-0.yaml"
+}
+
 resource "null_resource" "deploy_archy_flow_bot" {
   depends_on = [
     module.lambda_data_integration,

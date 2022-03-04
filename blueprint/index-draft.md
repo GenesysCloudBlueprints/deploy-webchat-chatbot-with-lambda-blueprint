@@ -1,29 +1,36 @@
-REMOVED FRONT MATTER 
-title: Build a Chatbot calling an AWS Lambda via a Genesys Cloud Data Action
+---
+title: Build a web chat-based chatbot calling an AWS Lambda via a Genesys Cloud Data Action
 author: john.carnell
 indextype: blueprint
 icon: blueprint
-image: images/images.png
+image: images/overview.png
 category: 5
 summary: |
-  This Genesys Cloud Developer Blueprint demonstrates how to build a chatbot using Genesys Cloud's Web Chat capabilities and integrating that chatbot with an AWS lambda
-REMOVED FRONTMATTER
+  This Genesys Cloud Developer blueprint demonstrates how to build a web chat-based chatbot using Genesys Cloud's web chat and bot capabilities and integrating that chatbot with an AWS lambda
+---
 
-This Genesys Cloud Developer Blueprint demonstrates how to build a chatbot using Genesys Cloud's Web Chat capabilities and integrating that chatbot with an AWS lambda.
+:::{"alert":"info","title":"Important Information","collapsible":false,"autoCollapse":false}
+While the Web Chat capability is still supported by Genesys, Genesys is investing in its next generation
+messaging platform, [Web Messaging](/api/digital/webmessaging/).
+
+Please only leverage this blueprint if you have existing Web Chat deployments. Otherwise, it is strongly recommended you look at the [sister blueprint](https://github.com/GenesysCloudBlueprints/deploy-webmessaging-chatbot-with-lambda-blueprint) to this one that delivers the exact same solution, except uses Web Messaging to do it.
+:::
+
+This Genesys Cloud Developer blueprint demonstrates how to build a chatbot using Genesys Cloud's Web chat capabilities and integrating that chatbot with an AWS lambda. 
 
 This blueprint also demonstrates how to:
 
-* Build a bot Genesys Cloud Architect Flow that can be integrated with a Genesys Cloud Architect inbound chat flow.
-* Built an inbound chat Genesys Cloud Architect flow. 
-* Deploy the inbound Chat flow using a Genesys Cloud Chat widget.
+* Build a bot Genesys Cloud Architect flow leverages machine learning to communicate intelligently with a customer.
+* Built an inbound chat Genesys Cloud Architect flow this will integrate with the bot flow. 
+* Expose the chatbot for consumption using the Genesys Cloud Web Chat widget.
 * Integrate an AWS Lambda in the inbound chat flow using a Genesys Cloud Data Action.
 * Deploy both the AWS Lambda, all AWS IAM roles and CX as Code components all from within a single Terraform/CX as Code project.
 
 ## Scenario
 
-An organization is interesting in build a service chat bot that will allow a customer to find out the status of an order they have placed. The goal with this chat bot is to:
+An organization is interesting in building a chatbot that will allow a customer to find out the status of an order they have placed. The goal with this chatbot is to:
 
-* **Implement a chatbot that can be used across multiple contact center channels.** - The development team wants to quickly stand up a bot flow that can be used to process inbound chats.  However, they want to leverage this flow in a non-channel specific way so that at some point in the future it can be integrated into with a voice channel.
+* **Implement a chatbot that can be used across multiple contact center channels.** - The development team wants to quickly stand up a bot flow that can be used to process inbound chats. However, they want to leverage this flow in a non-channel specific way so that at some point in the future it can be integrated into with a voice channel.
 
 * **Implement a chatbot on their company website.** - The company wants to be able to deliver the chatbot on their company website with minimal coding effort.
 
@@ -33,14 +40,14 @@ An organization is interesting in build a service chat bot that will allow a cus
 
 The organization can leverage Genesys Cloud Architect bot flows, inbound chat, data actions and chat widget to build their chatbot. These Genesys Cloud components can provide the following capabilities:
 
-1. **Bot Flow**. This is a Genesys Cloud Architect Flow that allows you to define the utterances and intents associated with speech and text detection in a chat or voice bot. 
-2. **Inbound Chat Flow**. This is a Genesys Cloud Architect Flow that builds on top of a Genesys Cloud Bot flow. The inbound chat flow provides the integration and routing layer getting the customer to the right information or people.  
+1. **Bot Flow**. This is a Genesys Cloud Architect flow that allows you to define the utterances and intents associated with speech and text detection in a chat or voice bot. 
+2. **Inbound Chat Flow**. This is a Genesys Cloud Architect flow that builds on top of a Genesys Cloud Bot flow. The inbound chat flow provides the integration and routing layer to get the customer to the right information or people.  
 3. **Data Action**. A Genesys Cloud Data Action provides the integration point out to a third-party REST web service or AWS lambda.
 4. **Chat Widget**. The Genesys Cloud Chat widget allows you to configure and create a Javascript chat widget that can deployed into an organization's web site.
 
-All of these Genesys Cloud components, along with the AWS lambda are used to look up a customer's order status. All the components used in this solutioncan be deployed using Terraform, the Terraform AWS provider and the Terraform Genesys Cloud CX as Code provider. The diagram below illustrates all of the Terraform providers and the resources they will create.  
+All of these Genesys Cloud components, along with the AWS lambda are used to look up a customer's order status. All the components used in this solution can be deployed using Terraform, the Terraform AWS provider and the Terraform Genesys Cloud CX as Code provider. The diagram below illustrates all of the Terraform providers and the resources they will create.  
 
-![Build a Chatbot calling an AWS Lambda via a Genesys Cloud Data Action](images/overview.png "Build a Chatbot calling an AWS Lambda via a Genesys Cloud Data Action")
+![Build a web chat-based chatbot calling an AWS Lambda via a Genesys Cloud Data Action](images/overview.png "Build a web chat-based chatbot calling an AWS Lambda via a Genesys Cloud Data Action")
 
 ## Contents
 
@@ -52,11 +59,11 @@ All of these Genesys Cloud components, along with the AWS lambda are used to loo
 
 ## Solution components
 
-* **Genesys Cloud** - A suite of Genesys Cloud services for enterprise-grade communications, collaboration, and contact center management. In this solution, you use an Architect bot, Architect chat flow, and a Genesys Cloud integration, data action, queues, and chat widget.
+* **Genesys Cloud** - A suite of Genesys Cloud services for enterprise-grade communications, collaboration, and contact center management. In this solution, you use an Architect bot flow, Architect chat flow, and a Genesys Cloud integration, data action, queues, and chat widget.
 * **Archy** - A Genesys Cloud command-line tool for building and managing Architect flows.
 * **CX as Code** - A Genesys Cloud Terraform provider that provides an interface for declaring core Genesys Cloud objects.
 * **AWS Terraform Provider** - An Amazon supported Terraform provides an interface for declaring Amazon Web Services infrastructure.
-* **AWS Lambda** - A serverless computing service for running code without creating or maintaining the underlying infrastructure. In this solution, AWS Lambda processes requests that come through the Amazon API Gateway and calls the Amazon Comprehend endpoint. For more information, see [AWS Lambda](https://aws.amazon.com/translate/ "Opens the Amazon AWS Lambda page") in the Amazon featured services website. 
+* **AWS Lambda** - A serverless computing service for running code without creating or maintaining the underlying infrastructure. For more information, see [AWS Lambda](https://aws.amazon.com/translate/ "Opens the Amazon AWS Lambda page") in the Amazon featured services website. 
 
 ## Software development kits
 
@@ -107,14 +114,14 @@ This will build a Linux executable called `main` in the `bin` directory.  The CX
 ## Implementation steps
 
 1. [Clone the GitHub repository](#clone-the-github-repository "Goes to the Clone the GitHub repository section")
-2. [Setup your AWS and Genesys Cloud Credentials](#train-and-deploy-the-amazon-comprehend-machine-learning-classifier "Goes to the Train and deploy the AWS Comprehend machine learning classifier section")
-3. [Configure your Terraform build ](#deploy-the-serverless-microservice-using-aws-lambda-and-amazon-api-gateway "Goes to the Deploy the serverless microservice using AWS Lambda and Amazon API Gateway section")
-4. [Run Terraform](#define-the-terraform-cloud-configuration "Goes to the Define the Terraform Cloud configuration section")
+2. [Setup your AWS and Genesys Cloud Credentials](#setup-your-aws-and-genesys-cloud-credentials "Goes to the Setup your AWS and Genesys Cloud Credentials section")
+3. [Configure your Terraform build ](#configure-your-terraform-build "Goes to the Configure your Terraform build")
+4. [Run Terraform](#run-terraform "Goes to the Run Terraform section")
 5. [Test the deployment](#test-the-deployment "Goes to the Test the deployment section")
 
 ### Clone the GitHub repository
 
-Clone the GitHub repository [deploy-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-chatbot-with-lambda-blueprint "Opens the GitHub repository") to your local machine. The `deploy-chatbot-with-lambda-blueprint/blueprint` folder includes solution-specific scripts and files in these subfolders:
+Clone the GitHub repository [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webchatchatbot-with-lambda-blueprint "Opens the GitHub repository") to your local machine. The `deploy-webchat-chatbot-with-lambda-blueprint/blueprint` folder includes solution-specific scripts and files in these subfolders:
 * `lambda-orderstatus` - Source code for the example lambda used in this application.
 * `terraform` - All Terraform files and Architect flows to deploy the application.
 
@@ -184,9 +191,11 @@ If you get a message back from a chatbot that their was a problem with your orde
 
   
 ## Additional resources
-* [Genesys Cloud Web Chat](/api/digital/ "Opens the web chat documentation") in the Genesys Cloud Developer Center.
+* [Genesys Cloud Web Chat](/api/digital/webchat/ "Opens the web chat documentation") in the Genesys Cloud Developer Center.
+* [Genesys Cloud Web Messaging](/api/digital/webmessaging/ "Opens the web messaging documentation") in the Genesys Cloud Developer Center.
 * [Genesys Cloud data actions integrations](https://help.mypurecloud.com/?p=209478 "Opens the data actions integrations article") in the Genesys Cloud Resource Center
 * [Genesys Cloud data actions/lambda integrations](https://help.mypurecloud.com/articles/about-the-aws-lambda-data-actions-integration/ "Opens the data actions/lambda integrations article") in the Genesys Cloud Resource Center.
 * [Terraform Registry Documentation](https://registry.terraform.io/providers/MyPureCloud/genesyscloud/latest/docs "Opens the Genesys Cloud provider page") in the Terraform documentation
 * [Genesys Cloud DevOps Repository](https://github.com/GenesysCloudDevOps) Opens the Genesys Cloud DevOps Github. 
-* [deploy-chatbot-with-lambda-blueprint Private repository](https://github.com/GenesysCloudDevOps/deploy-chatbot-with-lambda-blueprint "Goes to the deploy-chatbot-with-lambda-blueprint repository") in Github.
+* [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudDevOps/deploy-webchat-chatbot-with-lambda-blueprint "Goes to the deploy-webchat-chatbot-with-lambda-blueprint repository") in Github.
+* [deploy-webmessaging-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webmessaging-chatbot-with-lambda-blueprint "Goes to the deploy-webmessaging-chatbot-with-lambda-blueprint repository") in Github.
