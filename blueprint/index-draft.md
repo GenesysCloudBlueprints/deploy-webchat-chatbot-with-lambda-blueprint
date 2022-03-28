@@ -10,19 +10,19 @@ summary: |
 ---
 ## Scenario
 
-An organization is interested in building a chatbot that allows customers to find out the status of an order they have placed. The goal of this chatbot is to,
+An organization is interested in building a chatbot that allows customers to check the status of an order they have placed. The goal of this chatbot is to:
 
 * **Implement a chatbot that can be used across multiple contact center channels.** - The development team wants to quickly stand up a bot flow that they can use to process inbound chats. However, they want to leverage this flow in a non-channel-specific way to integrate it with a voice channel in the future.
 
 * **Implement a chatbot on their company website.** - The company wants to be able to deliver the chatbot on its company website with minimal coding effort.
 
-* **Integrate their chatbot with an AWS lambda to look up the order status for a customer** - The organization already has an AWS lambda that they use in other places for looking up customer order information. They want to reuse this lambda in their chatbot to speed up overall delivery velocity and promote reuse.
+* **Integrate their chatbot with an AWS lambda to look up the order status for a customer** - The organization already has an AWS lambda that they use for looking up customer order information. They want to reuse this lambda in their chatbot to speed up overall delivery velocity and promote reuse.
 
 ## Solution
 
 The organization can leverage Genesys Cloud Architect bot flows, inbound chat, data actions and chat widget to build their chatbot. These Genesys Cloud components can provide the following capabilities.
 
-1. **Bot Flow**. This Genesys Cloud Architect flow allows you to define the utterances and intents associated with speech and text detection in a chat or voice bot. 
+1. **Bot Flow**. This Genesys Cloud Architect flow allows you to define the words and intents associated with speech and text detection in a chat or voice bot. 
 2. **Inbound Chat Flow**. This Genesys Cloud Architect flow builds on top of a Genesys Cloud Bot flow. The inbound chat flow provides the integration and routing layer to get the customer to the right information or people.  
 3. **Data Action**. A Genesys Cloud Data Action provides the integration point out to a third-party REST web service or AWS lambda.
 4. **Chat Widget**. The Genesys Cloud Chat widget allows you to configure and create a JavaScript chat widget that can deploy to an organization's website.
@@ -44,12 +44,12 @@ All the Genesys Cloud components and the AWS lambda are used to look up a custom
 While Genesys still support the Web Chat capability, Genesys is investing in its next generation
 messaging platform, [Web Messaging](/api/digital/webmessaging/).
 
-Only leverage this blueprint if you have existing Web Chat deployments. Otherwise, you should view the [sister blueprint](https://github.com/GenesysCloudBlueprints/deploy-webmessaging-chatbot-with-lambda-blueprint) to this one that delivers the exact solution, except uses Web Messaging to do it.
+Only leverage this blueprint if you have existing Web Chat deployments. Otherwise, you should view the [sister blueprint](https://github.com/GenesysCloudBlueprints/deploy-webmessaging-chatbot-with-lambda-blueprint) that delivers the exact solution, except uses Web Messaging.
 :::
 
 This Genesys Cloud Developer blueprint demonstrates how to build a chatbot using Genesys Cloud's Web chat capabilities and integrating that chatbot with an AWS lambda. 
 
-This blueprint demonstrates how to,
+This blueprint demonstrates how to:
 
 * Build a bot Genesys Cloud Architect flow leverages machine learning to communicate intelligently with a customer.
 * Build an inbound chat Genesys Cloud Architect flow that integrates with the bot flow. 
@@ -75,9 +75,9 @@ This blueprint demonstrates how to,
 
 ## Software development kits
 
-There are no required SDKs needed for this project.  This project contains everything to deploy the blueprint, including a pre-compiled version of the AWS lambda. 
+There are no required SDKs needed for this project. This project contains everything to deploy the blueprint, including a pre-compiled version of the AWS lambda. 
 
-If you want change to the AWS lambda, the source code can be found in the `lambda-orderstatus` directory. To build this lambda, you need the Golang SDK. The latest Golang version of Golang can be found [The Go programming language](https://go.dev/ "Goes to the Go programming language page"). To rebuild the lambda from the source code:
+If you want changes to the AWS lambda, the source code can be found in the `lambda-orderstatus` directory. To build this lambda, you need the Golang SDK. The latest Golang version of Golang can be found [The Go programming language](https://go.dev/ "Goes to the Go programming language page"). To rebuild the lambda from the source code:
 
 1. Have the Golang SDK installed on the machine.
 2. Change to the `blueprint/lambda-orderstatus directory.
@@ -85,7 +85,7 @@ If you want change to the AWS lambda, the source code can be found in the `lambd
 
 This builds a Linux executable called `main` in the `bin` directory.  The CX as Code scripts compress this executable and deploy the zip as part of the AWS Lambda deploy via Terraform.
 
-:::primary: **NOTE**: The executable built above will only run on Linux. Golang allows you build Linux executables on Windows and OS/X, but you will not be able to run them locally.**
+:::primary: **NOTE**: The executable built above onlys run on Linux. Golang allows you build Linux executables on Windows and OS/X, but you will not be able to run them locally.**
 :::
 
 ### Genesys Cloud account
@@ -105,7 +105,7 @@ This builds a Linux executable called `main` in the `bin` directory.  The CX as 
 ### Development tools running in your local environment
 
 * Terraform (the latest binary). For more information see, [Download Terraform](https://www.terraform.io/downloads.html "Goes to the Download Terraform page") on the Terraform website.
-* Golang 1.16 or higher. For more information see, [Download Golang](https://go.dev/ "Goes to the Go programming languge page") in the Go website. 
+* Golang 1.16 or higher. For more information see, [Download Golang](https://go.dev/ "Goes to the Go programming languge page") on the Go website. 
 * Archy (the latest version). Archy is Genesys Cloud's command line to deploy Genesys Cloud Architect Flows. For more information see,
 
   * [Archy Documentation](/devapps/archy/ "Archy Documentation")
@@ -142,7 +142,7 @@ To run this project using the AWS and Genesys Cloud Terraform provider, you must
 
 ### Configure your Terraform build
 
-Several values are specific to your AWS region and Genesys Cloud organization.  These values can be defined in the `blueprint/terraform/dev.auto.tfvars` file.
+Several values are specific to your AWS region and Genesys Cloud organization. These values can be defined in the `blueprint/terraform/dev.auto.tfvars` file.
 
 The values that must be set include:
 
@@ -171,7 +171,7 @@ Once the environment variables and Terraform configuration from the previous ste
 
 2. `terraform apply --auto-approve` - This does the actual object creation and deployment against your AWS and Genesys Cloud accounts. The --auto--approve flag steps the approval step required before creating the objects.
 
-Once the `terraform apply --auto-approve` command has completed, you should see the output of the entire run along with the number of objects successfully created by Terraform. There are two things to keep in mind here:
+Once the `terraform apply --auto-approve` command has completed, you should see the output of the entire run along with the number of objects successfully created by Terraform. There are two things to keep in mind:
 
 1.  This project assumes you are running using a local Terraform backing state. This means that the `tfstate` files will be created in the same directory where you ran the project. Terraform does not recommend using local Terraform backing state files unless you run from a desktop and are comfortable with the deleted files.
 
@@ -186,12 +186,12 @@ Once the chatbot is deployed to your environment, you can test your chatbot by u
 Go to the [Genesys Cloud Web Chat harness](https://developer.genesys.cloud/developer-tools/#/webchat) in the Genesys Cloud Developer Center. Once there, perform these actions.
 
 1. Select from the Deployment drop-down; the chat deployment you created. In the diagram above, it would be populated with `dev-dude-order-status-chat-widget`. If you do not see that value, the web chat widget did not deploy correctly.
-2. Select a queue. This is a requirement of the Web Chat harness tool. For this example, I chose the 401K queue in my organization.
-3. Pre-populate the Chat fields.  While you can manually fill in your chat information, you can hit the `Populate Fields` button and have the data randomly generated for you.
-4. Hit the start the chat button.  This initiates a chat with your organization.
-5. Respond. Once the chat is started, you will be greeted by a chat bot asking "`How can I help you with your order today?`". If you respond with the term `order status` and when prompted for your 8-digit order number, you enter `12345678`, you should see the response of `Hi, Thanks for reaching out to us about order #: 12345678. The status of the order is Shipped`. If you get this response, the chat bot has successfully hit the AWS lambda in question and successfully processed the requests for order status.
+2. Select a queue. This is a Web Chat harness tool requirement. For this example, the 401K queue within my organization was selected.
+3. Pre-populate the Chat fields. While you can manually fill in your chat information, you can hit the `Populate Fields` button and the data randomly generates for you.
+4. Hit start the chat button. This initiates a chat with your organization.
+5. Respond. Once the chat is started, you will be greeted by a chat bot response "`How can I help you with your order today?`". If you respond with the term `order status` and when prompted for your 8-digit order number, you enter `12345678`, you should see the response of `Hi, Thanks for reaching out to us about order #: 12345678. The status of the order is Shipped`. If you receive this response, the chat bot has successfully hit the AWS lambda in question and successfully processed the requests for order status.
 
-If you get a message back from a chatbot that there was a problem with your order, the AWS lambda did not deploy properly, and Genesys Cloud had a problem invoking it.
+If you receive a message from a chatbot that there was a problem with your order, the AWS lambda did not deploy properly, and Genesys Cloud had a problem invoking it.
 
 ## Additional resources
 
