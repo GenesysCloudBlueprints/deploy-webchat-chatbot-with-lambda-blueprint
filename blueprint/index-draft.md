@@ -6,7 +6,7 @@ icon: blueprint
 image: images/overview.png
 category: 5
 summary: |
-  This Genesys Cloud Developer blueprint demonstrates how to build a web chat-based chatbot using Genesys Cloud's web chat and bot capabilities and integrating that chatbot with an AWS lambda
+  This Genesys Cloud Developer blueprint demonstrates how to build a web chat-based chatbot using Genesys Cloud's web chat and bot capabilities and integrating that chatbot with an AWS lambda.
 ---
 ## Scenario
 
