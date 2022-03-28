@@ -63,7 +63,7 @@ This blueprint demonstrates how to,
 * **Archy** - A Genesys Cloud command-line tool for building and managing Architect flows.
 * **CX as Code** - A Genesys Cloud Terraform provider that provides an interface for declaring core Genesys Cloud objects.
 * **AWS Terraform Provider** - An Amazon-supported Terraform provides an interface for declaring Amazon Web Services infrastructure.
-* **AWS Lambda** - A serverless computing service for running code without creating or maintaining the underlying infrastructure. For more information see, [AWS Lambda](https://aws.amazon.com/translate/ "Opens the Amazon AWS Lambda page") on the Amazon featured services website. 
+* **AWS Lambda** - A serverless computing service for running code without creating or maintaining the underlying infrastructure. For more information see, [AWS Lambda](https://aws.amazon.com/translate/ "Opens the Amazon AWS Translate page") on the Amazon featured services website. 
 
 ## Prerequisites
 
@@ -195,11 +195,11 @@ If you get a message back from a chatbot that there was a problem with your orde
 
 ## Additional resources
 
-* [Genesys Cloud Web Chat](/api/digital/webchat/ "Opens the web chat documentation") in the Genesys Cloud Developer Center.
-* [Genesys Cloud Web Messaging](/api/digital/webmessaging/ "Opens the web messaging documentation") in the Genesys Cloud Developer Center.
-* [Genesys Cloud data actions integrations](https://help.mypurecloud.com/?p=209478 "Opens the data actions integrations article") in the Genesys Cloud Resource Center
-* [Genesys Cloud data actions/lambda integrations](https://help.mypurecloud.com/articles/about-the-aws-lambda-data-actions-integration/ "Opens the data actions/lambda integrations article") in the Genesys Cloud Resource Center.
-* [Terraform Registry Documentation](https://registry.terraform.io/providers/MyPureCloud/genesyscloud/latest/docs "Opens the Genesys Cloud provider page") in the Terraform documentation.
-* [Genesys Cloud DevOps Repository](https://github.com/GenesysCloudDevOps) Opens the Genesys Cloud DevOps GitHub. 
-* [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudDevOps/deploy-webchat-chatbot-with-lambda-blueprint "Goes to the deploy-webchat-chatbot-with-lambda-blueprint repository") in GitHub.
+* [Genesys Cloud Web Chat](/api/digital/webchat/ "Goes to the web chat documentation") in the Genesys Cloud Developer Center.
+* [Genesys Cloud Web Messaging](/api/digital/webmessaging/ "Goes to the web messaging documentation") in the Genesys Cloud Developer Center.
+* [Genesys Cloud About the data actions integrations](https://help.mypurecloud.com/?p=209478 "Goes to About the data actions integrations article") in the Genesys Cloud Resource Center
+* [Genesys Cloud About the data actions/lambda integrations](https://help.mypurecloud.com/?p=178553 "Goes to About the AWS Lambda data actions integration article") in the Genesys Cloud Resource Center.
+* [Terraform Registry Documentation](https://registry.terraform.io/providers/MyPureCloud/genesyscloud/latest/docs "Goes to the Genesys Cloud provider page") in the Terraform documentation.
+* [Genesys Cloud DevOps Repository](https://github.com/GenesysCloudDevOps "Goes to the Genesys Cloud DevOps repository page") in GitHub. 
+* [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webchat-chatbot-with-lambda-blueprint "Goes to the deploy-webchat-chatbot-with-lambda-blueprint repository") in GitHub.
 * [deploy-webmessaging-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webmessaging-chatbot-with-lambda-blueprint "Goes to the deploy-webmessaging-chatbot-with-lambda-blueprint repository") in GitHub.
