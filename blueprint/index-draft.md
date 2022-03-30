@@ -185,15 +185,17 @@ After the chatbot is deployed to your environment, use the Genesys Cloud Web Cha
 
 ![Test your deployed web chat](images/testchat.png "Test your deployed web chat")
 
-Go to the [Genesys Cloud Web Chat harness](https://developer.genesys.cloud/developer-tools/#/webchat) in the Genesys Cloud Developer Center. Once there, perform these actions.
+1. Go to the [Genesys Cloud Web Chat harness](https://developer.genesys.cloud/developer-tools/#/webchat) in the Genesys Cloud Developer Center.  
+2. From the **Deployment** list, select your chat deployment. In the diagram above, the sample deployment would appear as `dev-dude-order-status-chat-widget`. If you do not see your chat deployment, the web chat widget did not deploy correctly.
+3. Select a queue. This is a Web Chat harness tool requirement. For this example, the 401K queue within my organization was selected.
+4. To quickly complete the **Chat Data** fields, click **Populate Fields**.  
+5. Click **Start Chat**. This button initiates a chat with your organization. After the chat starts, you are greeted by a chat bot that asks, "`How can I help you with your order today?`". 
+6. Respond by entering `order status`. 
+7. When prompted for your 8-digit order number, enter `12345678`. 
 
-1. Select from the Deployment drop-down; the chat deployment you created. In the diagram above, it would be populated with `dev-dude-order-status-chat-widget`. If you do not see that value, the web chat widget did not deploy correctly.
-2. Select a queue. This is a Web Chat harness tool requirement. For this example, the 401K queue within my organization was selected.
-3. Pre-populate the Chat fields. While you can manually fill in your chat information, you can hit the `Populate Fields` button and the data randomly generates for you.
-4. Hit start the chat button. This initiates a chat with your organization.
-5. Respond. Once the chat is started, you will be greeted by a chat bot response "`How can I help you with your order today?`". If you respond with the term `order status` and when prompted for your 8-digit order number, you enter `12345678`, you should see the response of `Hi, Thanks for reaching out to us about order #: 12345678. The status of the order is Shipped`. If you receive this response, the chat bot has successfully hit the AWS lambda in question and successfully processed the requests for order status.
+You should see the response of `Hi, Thanks for reaching out to us about order #: 12345678. The status of the order is Shipped`. If you receive this response, the chat bot has successfully connected with the AWS lambda, which then successfully processed your request for the order status.
 
-If you receive a message from a chatbot that there was a problem with your order, the AWS lambda did not deploy properly, and Genesys Cloud had a problem invoking it.
+If you receive a message from a chatbot that there was a problem with your order, the AWS lambda did not deploy properly and Genesys Cloud had a problem invoking it.
 
 ## Additional resources
 
