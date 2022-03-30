@@ -20,41 +20,22 @@ Leverage this blueprint **only** if you have existing web chat deployments. Othe
 
 ## Scenario
 
-An organization is interested in building a chatbot that allows customers to check the status of an order they have placed. They want to: 
+An organization is interested in building a chatbot that allows customers to check the status of an order they have placed. The development team wants to: 
 
-* Implement a chatbot across multiple contact center channels. Initially, the development team wants to quickly stand up a bot flow that processes inbound chats. However, they want to leverage this flow in a non-channel-specific way to integrate it with a voice channel in the future.
-
-* Implement a chatbot on their company website with minimal coding effort.
-
-* Integrate their chatbot with an existing AWS lambda that looks up the order status for a customer. By promoting reuse, the development team will speed up delivery velocity and demonstrate efficient code reuse.
+* Quickly implement a chatbot on the company website with minimal coding effort.
+* Implement a chatbot across multiple contact center channels. Initially, the bot flow will process inbound chats. However, by designing the flow in a non-channel-specific way, the dev team will be able to integrate it with a voice channel later.
+* Integrate the chatbot with an existing AWS lambda that looks up the order status for a customer. By promoting reuse, the development team will speed up delivery and demonstrate efficient design.
 
 ## Solution
 
-The organization leverages a Genesys Cloud Architect bot flow, inbound chat flow, data action, and chat widget:
+This blueprint explains how to use the following Genesys Cloud capabilities: 
 
-* **Bot flow:** allows you to define the words and intents associated with speech and text detection in a chat or voice bot
-* **Inbound chat flow:** provides the integration and the routing layer that gets the customer to the right information or people
-* **Data action:** provides the integration to a third-party REST web service or AWS lambda
-* **Chat widget:** allows you to configure and create a JavaScript chat widget that deploys to an organization's website
+* **Architect Bot flow:** allows you to define the words and intents associated with speech and text detection in a chat or voice bot. The bot flow leverages machine learning to communicate intelligently with customers.
+* **ArchitectInbound chat flow:** provides the integration and the routing layer that gets the customer to the right information or people
+* **Data action:** provides the integration to the AWS lambda that looks up a customer's order status
+* **Web chat widget:** allows developers to configure and create a JavaScript web chat widget that deploys to their organization's website where customers interact with it
 
-Together with these Genesys Cloud components, the AWS lambda looks up a customer's order status. 
-
-This Genesys Cloud Developer blueprint demonstrates how to build a chatbot using Genesys Cloud's Web chat capabilities and integrating that chatbot with an AWS lambda. 
-
-This blueprint demonstrates how to:
-
-* Build a bot Genesys Cloud Architect flow leverages machine learning to communicate intelligently with a customer.
-* Build an inbound chat Genesys Cloud Architect flow that integrates with the bot flow. 
-* Expose the chatbot for consumption using the Genesys Cloud Web Chat widget.
-* Integrate an AWS Lambda in the inbound chat flow using a Genesys Cloud Data Action.
-* Deploy both the AWS Lambda, all AWS IAM roles, and CX as Code components, all from within a single Terraform/CX as Code project.
-
-This blueprint demonstrates how to:
-
-* Build a Genesys Cloud Architect bot flow that leverages machine learning to communicate intelligently with a customer
-* Build a Genesys Cloud Architect inbound chat flow that integrates with the bot flow
-* Expose the chatbot for consumption using the Genesys Cloud Web Chat widget
-* Integrate an AWS Lambda in the inbound chat flow using a Genesys Cloud data action
+Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS IAM roles, and all the CX as Code components rom within a single Terraform/CX as Code project.
 
 ## Contents
 
@@ -63,11 +44,6 @@ This blueprint demonstrates how to:
 * [Prerequisites](#prerequisites "Goes to the Prerequisites section")
 * [Implementation steps](#implementation-steps "Goes to the Implementation steps section")
 * [Additional resources](#additional-resources "Goes to the Additional resources section")
-
-
-
-
-
 
 ## Solution components
 
