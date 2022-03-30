@@ -100,8 +100,8 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 
 Clone the GitHub repository [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webchat-chatbot-with-lambda-blueprint "Goes to the GitHub repository") on your local machine. The `deploy-webchat-chatbot-with-lambda-blueprint/blueprint` folder includes solution-specific scripts and files in these subfolders:
 
-* `lambda-orderstatus` - Source code for the AWS lambda used in this application.
-* `terraform` - All Terraform files and Architect flows needed to deploy the application.
+* `lambda-orderstatus` - Source code for the AWS lambda used in this application
+* `terraform` - All Terraform files and Architect flows that are needed to deploy the application
 
 ### Set up your AWS credentials
 
@@ -125,28 +125,30 @@ For information about setting up your AWS credentials on your local machine, see
 
 ### Optionally update the AWS lambda
 
-If you want changes to the AWS lambda, the source code can be found in the `lambda-orderstatus` directory. To build this lambda, you need the Golang SDK. The latest Golang version of Golang can be found [The Go programming language](https://go.dev/ "Goes to the Go programming language page"). To rebuild the lambda from the source code:
+If you want changes to the AWS lambda, the source code can be found in the `lambda-orderstatus` directory. To build this lambda, you need the Golang SDK. The latest Golang version of Golang can be found [The Go programming language](https://go.dev/ "Goes to the Go programming language page"). 
 
-1. Have the Golang SDK installed on the machine.
+To rebuild the lambda from the source code:
+
+1. Install the Golang SDK on your local machine.
 2. Change to the `blueprint/lambda-orderstatus directory.
 3. Issue this build command: `GOOS=linux go build -o bin/main ./...`
 
 This builds a Linux executable called `main` in the `bin` directory.  The CX as Code scripts compress this executable and deploy the zip as part of the AWS lambda deploy via Terraform.
 
-:::primary: **NOTE**: The executable built above onlys run on Linux. Golang allows you build Linux executables on Windows and OS/X, but you will not be able to run them locally.**
+:::primary
+**Note**: The executable runs only on Linux. Golang allows you build Linux executables on Windows and OS/X, but you will not be able to run them locally.**
 :::
-
 
 ### Configure your Terraform build
 
-Several values are specific to your AWS region and Genesys Cloud organization. These values can be defined in the `blueprint/terraform/dev.auto.tfvars` file.
+You must define several values that are specific to your AWS region and Genesys Cloud organization. 
 
-The values that must be set include:
+In the `blueprint/terraform/dev.auto.tfvars` file, set the following values:
 
-* `organizationId` - Your Genesys Cloud organization id.
-* `awsRegion` - The AWS region (e.g us-east-1, us-west-2) that you are going to deploy the target AWS lambda to.
-* `environment` - This is a free-form field that is combined with the prefix value to define the name of various AWS and Genesys Cloud artifacts. For example, if you set the environment name to be `dev` and the prefix to be `dude-order-status` your AWS lambda, IAM roles, Genesys Cloud Integration and Data Actions will all begin with `dev-dude-order-status`.
-* `prefix`- This a free-form field that will be combined with the environment value to define the name of various AWS and Genesys Cloud artifacts.
+* `organizationId` - Your Genesys Cloud organization ID
+* `awsRegion` - The AWS region (for example us-east-1, us-west-2) where you are going to deploy the target AWS lambda.
+* `environment` - This is a free-form field that combines with the prefix value to define the name of various AWS and Genesys Cloud artifacts. For example, if you set the environment name to be `dev` and the prefix to be `dude-order-status` your AWS lambda, IAM roles, Genesys Cloud Integration and Data Actions will all begin with `dev-dude-order-status`.
+* `prefix`- This a free-form field that combines with the environment value to define the name of various AWS and Genesys Cloud artifacts.
 
 The following is an example of the `dev.auto.tfvars` used by the author of this blueprint.
 
@@ -157,28 +159,31 @@ environment            = "dev"
 prefix                 = "dude-order-status"
 ```
 
-:::primary: **NOTE**: If you change the environment and prefix, make sure you change the name of the lambda inside the `blueprints/terraform/architect-flows/DudeWheresMyStuffChat_v23-0.yaml` file to the name of the new lambda.
+:::primary
+**Note**: If you change the environment and prefix, make sure you change the name of the lambda inside the `blueprints/terraform/architect-flows/DudeWheresMyStuffChat_v23-0.yaml` file to the name of the new lambda.
 :::
 
 ### Run Terraform
 
-Once the environment variables and Terraform configuration from the previous steps have been set, you are now ready to run this blueprint against your organization. Change to the `blueprints/terraform` directory and issue these commands:
+You are now ready to run this blueprint solution for your organization. 
 
-1. `terraform plan` - This executes a trial run against your Genesys Cloud organization and shows you a list of all the AWS, and Genesys Cloud resources created. Review this list and make sure you are comfortable with the activity being undertake before continuing to the second step.
+1, Change to the `blueprints/terraform` directory and issue these commands:
 
-2. `terraform apply --auto-approve` - This does the actual object creation and deployment against your AWS and Genesys Cloud accounts. The --auto--approve flag steps the approval step required before creating the objects.
+* `terraform plan` - This executes a trial run against your Genesys Cloud organization and shows you a list of all the AWS, and Genesys Cloud resources created. Review this list and make sure you are comfortable with the activity being undertake before continuing to the second step.
 
-Once the `terraform apply --auto-approve` command has completed, you should see the output of the entire run along with the number of objects successfully created by Terraform. There are two things to keep in mind:
+* `terraform apply --auto-approve` - This does the actual object creation and deployment against your AWS and Genesys Cloud accounts. The --auto--approve flag steps the approval step required before creating the objects.
 
-1.  This project assumes you are running using a local Terraform backing state. This means that the `tfstate` files will be created in the same directory where you ran the project. Terraform does not recommend using local Terraform backing state files unless you run from a desktop and are comfortable with the deleted files.
+After the `terraform apply --auto-approve` command has completed, you should see the output of the entire run along with the number of objects successfully created by Terraform. Keep these points in mind:
 
-2. As long as your local Terraform backing state projects are kept, you can teardown the blueprint in question by changing to the `blueprint/terraform` directory and issuing a `terraform destroy --auto-approve` command. This destroys all objects currently managed by the local Terraform backing state.
+*  This project assumes you are running using a local Terraform backing state. This means that the `tfstate` files will be created in the same directory where you ran the project. Terraform does not recommend using local Terraform backing state files unless you run from a desktop and are comfortable with the deleted files.
+
+* As long as your local Terraform backing state projects are kept, you can tear down the blueprint in question by changing to the `blueprint/terraform` directory and issuing a `terraform destroy --auto-approve` command. This destroys all objects currently managed by the local Terraform backing state.
 
 ### Test your deployment
 
-Once the chatbot is deployed to your environment, you can test your chatbot by using the Genesys Cloud Web Chat harness to test the newly deployed web chat. The diagram below shows how to use the Web Chat harness.
+After the chatbot is deployed to your environment, use the Genesys Cloud Web Chat feature to test the newly deployed web chat, as shown below.  
 
-![Testing your deployed Web Chat](images/testchat.png "Testing your deployed Web Chat")
+![Test your deployed web chat](images/testchat.png "Test your deployed web chat")
 
 Go to the [Genesys Cloud Web Chat harness](https://developer.genesys.cloud/developer-tools/#/webchat) in the Genesys Cloud Developer Center. Once there, perform these actions.
 
