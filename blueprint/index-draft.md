@@ -63,7 +63,7 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 
 ### Genesys Cloud account
 
-* A Genesys Cloud license. For more information see, [Genesys Cloud Pricing](https://www.genesys.com/pricing "Goes to the Genesys Cloud pricing page") in the Genesys Cloud website. For this project, you need at least a Genesys Cloud Engage 3 and botFlows license for your organization.
+* A Genesys Cloud license. For more information see, [Genesys Cloud Pricing](https://www.genesys.com/pricing "Goes to the Genesys Cloud pricing page") in the Genesys Cloud website. For this project, you need at least a Genesys Cloud CX 3 license and a botFlows license for your organization.
 * Master Admin role. For more information see, [Roles and permissions overview](https://help.mypurecloud.com/?p=24360 "Goes to the Roles and permissions overview article") in the Genesys Cloud Resource Center.
 * Archy. For more information see, [Welcome to Archy](https://developer.genesys.cloud/devapps/archy/ "Goes to the Welcome to Archy page") in the Genesys Cloud Developer Center.
 * CX as Code. For more information see, [CX as Code](https://developer.genesys.cloud/api/rest/CX-as-Code/ "Goes to the CX as Code page") in the Genesys Cloud Developer Center.
@@ -72,14 +72,14 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 
 * An administrator account with permissions to access these services:
   * AWS Identity and Access Management (IAM)
-  * AWS Lambda
-  * AWS credentials. For more information about setting up your AWS credentials on your local machine, see [About credential providers](https://docs.aws.amazon.com/sdkref/latest/guide/creds-config-files.html "Goes to the About credential providers page") on the AWS page.
-
+  * AWS lambda
+  * AWS credentials
+  
 ### Development tools running in your local environment
 
-* Terraform (the latest binary). For more information see, [Download Terraform](https://www.terraform.io/downloads.html "Goes to the Download Terraform page") on the Terraform website.
-* Golang 1.16 or higher. For more information see, [Download Golang](https://go.dev/ "Goes to the Go programming languge page") on the Go website. 
-* Archy (the latest version). Archy is Genesys Cloud's command line to deploy Genesys Cloud Architect Flows. For more information see,
+* Terraform (the latest binary). For more information, see [Download Terraform](https://www.terraform.io/downloads.html "Goes to the Download Terraform page") on the Terraform website.
+* Golang 1.16 or higher. For more information, see [Download Golang](https://go.dev/ "Goes to the Go programming languge page") on the Go website. 
+* Archy (the latest version). Archy is Genesys Cloud's command line to deploy Genesys Cloud Architect flows. For more information, see: 
 
   * [Archy Documentation](/devapps/archy/ "Archy Documentation")
   * [Installing and Configuring Archy - Video](https://www.youtube.com/watch?v=fOI_vq3PnM8 "Installing and configuring Archy")
@@ -89,22 +89,27 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 ## Implementation steps
 
 1. [Clone the GitHub repository](#clone-the-github-repository "Goes to the Clone the GitHub repository section")
-2. [Set up your AWS and Genesys Cloud Credentials](#set-up-your-aws-and-genesys-cloud-credentials "Goes to the Setup your AWS and Genesys Cloud Credentials section")
-3. [Optionally update the AWS lambda](#optionally-update-the-aws-lambda "Goes to the Optionally update the AWS Lambda section")
-4. [Configure your Terraform build ](#configure-your-terraform-build "Goes to the Configure your Terraform build")
-5. [Run Terraform](#run-terraform "Goes to the Run Terraform section")
-6. [Test the deployment](#test-the-deployment "Goes to the Test the deployment section")
+2. [Set up your AWS credentials](#set-up-your-aws-credentials "Goes to the Set up your AWS credentials section")
+3. [Set up your Genesys Cloud credentials](#set-up-your-genesys-cloud-credentials "Goes to the Set up your Genesys Cloud credentials section")
+4. [Optionally update the AWS lambda](#optionally-update-the-aws-lambda "Goes to the Optionally update the AWS Lambda section")
+5. [Configure your Terraform build ](#configure-your-terraform-build "Goes to the Configure your Terraform build")
+6. [Run Terraform](#run-terraform "Goes to the Run Terraform section")
+7. [Test the deployment](#test-the-deployment "Goes to the Test the deployment section")
 
 ### Clone the GitHub repository
 
 Clone the GitHub repository [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webchat-chatbot-with-lambda-blueprint "Goes to the GitHub repository") on your local machine. The `deploy-webchat-chatbot-with-lambda-blueprint/blueprint` folder includes solution-specific scripts and files in these subfolders:
-* `lambda-orderstatus` - Source code for the example lambda used in this application.
-* `terraform` - All Terraform files and Architect flows to deploy the application.
 
+* `lambda-orderstatus` - Source code for the AWS lambda used in this application.
+* `terraform` - All Terraform files and Architect flows needed to deploy the application.
 
-### Set up your AWS and Genesys Cloud Credentials
+### Set up your AWS credentials
 
-To run this project using the AWS and Genesys Cloud Terraform provider, you must open a terminal window, set the following environment variables, and run Terraform in the window where the environment variables are set. The following environment variables are set.
+For information about setting up your AWS credentials on your local machine, see [About credential providers](https://docs.aws.amazon.com/sdkref/latest/guide/creds-config-files.html "Goes to the About credential providers page") on the AWS page.
+
+### Set up your Genesys Cloud credentials
+
+1. To run this project using the AWS Terraform provider, open a terminal window and set the following environment variables:
 
  * `GENESYSCLOUD_OAUTHCLIENT_ID` - This is the Genesys Cloud client credential grant Id that CX as Code executes against. 
  * `GENESYSCLOUD_OAUTHCLIENT_SECRET` - This is the Genesys Cloud client credential secret that CX as Code executes against. 
@@ -112,7 +117,11 @@ To run this project using the AWS and Genesys Cloud Terraform provider, you must
  * `AWS_ACCESS_KEY_ID` - This is the AWS Access Key you must set up in your Amazon account to allow the AWS Terraform provider to act against your account.
  * `AWS_SECRET_ACCESS_KEY` - This is the AWS Secret you must set up in your Amazon account to allow the AWS Terraform provider to act against your account.
 
-**Note:** For this project, the Genesys Cloud OAuth Client was given the master admin role. 
+2. Run Terraform in the terminal window where the environment variables are set. 
+
+:::primary
+**Note:** For this project, the Genesys Cloud OAuth client requires the Master Admin role. 
+:::
 
 ### Optionally update the AWS lambda
 
@@ -122,7 +131,7 @@ If you want changes to the AWS lambda, the source code can be found in the `lamb
 2. Change to the `blueprint/lambda-orderstatus directory.
 3. Issue this build command: `GOOS=linux go build -o bin/main ./...`
 
-This builds a Linux executable called `main` in the `bin` directory.  The CX as Code scripts compress this executable and deploy the zip as part of the AWS Lambda deploy via Terraform.
+This builds a Linux executable called `main` in the `bin` directory.  The CX as Code scripts compress this executable and deploy the zip as part of the AWS lambda deploy via Terraform.
 
 :::primary: **NOTE**: The executable built above onlys run on Linux. Golang allows you build Linux executables on Windows and OS/X, but you will not be able to run them locally.**
 :::
@@ -135,8 +144,8 @@ Several values are specific to your AWS region and Genesys Cloud organization. T
 The values that must be set include:
 
 * `organizationId` - Your Genesys Cloud organization id.
-* `awsRegion` - The AWS region (e.g us-east-1, us-west-2) that you are going to deploy the target Lambda to.
-* `environment` - This is a free-form field that is combined with the prefix value to define the name of various AWS and Genesys Cloud artifacts. For example, if you set the environment name to be `dev` and the prefix to be `dude-order-status` your AWS Lambda, IAM roles, Genesys Cloud Integration and Data Actions will all begin with `dev-dude-order-status`.
+* `awsRegion` - The AWS region (e.g us-east-1, us-west-2) that you are going to deploy the target AWS lambda to.
+* `environment` - This is a free-form field that is combined with the prefix value to define the name of various AWS and Genesys Cloud artifacts. For example, if you set the environment name to be `dev` and the prefix to be `dude-order-status` your AWS lambda, IAM roles, Genesys Cloud Integration and Data Actions will all begin with `dev-dude-order-status`.
 * `prefix`- This a free-form field that will be combined with the environment value to define the name of various AWS and Genesys Cloud artifacts.
 
 The following is an example of the `dev.auto.tfvars` used by the author of this blueprint.
@@ -186,7 +195,7 @@ If you receive a message from a chatbot that there was a problem with your order
 * [Genesys Cloud Web Chat](/api/digital/webchat/ "Goes to the web chat documentation") in the Genesys Cloud Developer Center.
 * [Genesys Cloud Web Messaging](/api/digital/webmessaging/ "Goes to the web messaging documentation") in the Genesys Cloud Developer Center.
 * [Genesys Cloud About the data actions integrations](https://help.mypurecloud.com/?p=209478 "Goes to About the data actions integrations article") in the Genesys Cloud Resource Center
-* [Genesys Cloud About the data actions/lambda integrations](https://help.mypurecloud.com/?p=178553 "Goes to About the AWS Lambda data actions integration article") in the Genesys Cloud Resource Center.
+* [Genesys Cloud About the data actions/lambda integrations](https://help.mypurecloud.com/?p=178553 "Goes to About the AWS Lambda Data Actions integration article") in the Genesys Cloud Resource Center.
 * [Terraform Registry Documentation](https://registry.terraform.io/providers/MyPureCloud/genesyscloud/latest/docs "Goes to the Genesys Cloud provider page") in the Terraform documentation.
 * [Genesys Cloud DevOps Repository](https://github.com/GenesysCloudDevOps "Goes to the Genesys Cloud DevOps repository page") in GitHub. 
 * [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webchat-chatbot-with-lambda-blueprint "Goes to the deploy-webchat-chatbot-with-lambda-blueprint repository") in GitHub.
