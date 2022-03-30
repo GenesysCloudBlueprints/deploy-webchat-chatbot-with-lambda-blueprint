@@ -167,7 +167,7 @@ prefix                 = "dude-order-status"
 
 You are now ready to run this blueprint solution for your organization. 
 
-1, Change to the `blueprints/terraform` directory and issue these commands:
+1. Change to the `blueprints/terraform` directory and issue these commands:
 
 * `terraform plan` - This executes a trial run against your Genesys Cloud organization and shows you a list of all the AWS, and Genesys Cloud resources created. Review this list and make sure you are comfortable with the activity being undertake before continuing to the second step.
 
