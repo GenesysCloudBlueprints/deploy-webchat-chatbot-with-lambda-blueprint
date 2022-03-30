@@ -1,5 +1,5 @@
 ---
-title: Build a web chat-based chatbot calling an AWS Lambda via a Genesys Cloud Data Action
+title: Build a web chat-based chatbot that calls an AWS Lambda via a Genesys Cloud data action
 author: john.carnell
 indextype: blueprint
 icon: blueprint
@@ -23,19 +23,19 @@ Leverage this blueprint **only** if you have existing web chat deployments. Othe
 An organization is interested in building a chatbot that allows customers to check the status of an order they have placed. The development team wants to: 
 
 * Quickly implement a chatbot on the company website with minimal coding effort.
-* Implement a chatbot across multiple contact center channels. Initially, the bot flow will process inbound chats. However, by designing the flow in a non-channel-specific way, the dev team will be able to integrate it with a voice channel later.
+* Implement a chatbot across multiple contact center channels. Initially, the bot flow will process inbound chats. By designing the flow in a non-channel-specific way, the dev team will be able to integrate it with a voice channel later.
 * Integrate the chatbot with an existing AWS lambda that looks up the order status for a customer. By promoting reuse, the development team will speed up delivery and demonstrate efficient design.
 
 ## Solution
 
 This blueprint explains how to use the following Genesys Cloud capabilities: 
 
-* **Architect Bot flow:** allows you to define the words and intents associated with speech and text detection in a chat or voice bot. The bot flow leverages machine learning to communicate intelligently with customers.
-* **ArchitectInbound chat flow:** provides the integration and the routing layer that gets the customer to the right information or people
-* **Data action:** provides the integration to the AWS lambda that looks up a customer's order status
-* **Web chat widget:** allows developers to configure and create a JavaScript web chat widget that deploys to their organization's website where customers interact with it
+* **Architect bot flow** allows you to define the words and intents associated with speech and text detection in a chat or voice bot. The bot flow leverages machine learning to communicate intelligently with customers.
+* **Architect inbound chat flow** provides the integration and the routing layer that gets the customer to the right information or people.
+* **Data action** provides the integration to the AWS lambda that looks up a customer's order status.
+* **Web chat widget** allows developers to create and configure a JavaScript web chat widget that deploys to their organization's website where customers interact with it.
 
-Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS IAM roles, and all the CX as Code components rom within a single Terraform/CX as Code project.
+Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS IAM roles, and all the CX as Code components from within a single Terraform/CX as Code project.
 
 ## Contents
 
@@ -47,11 +47,11 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 
 ## Solution components
 
-* **Genesys Cloud** - A suite of Genesys Cloud services for enterprise-grade communications, collaboration, and contact center management. In this solution, you use an Architect bot flow, Architect chat flow, and a Genesys Cloud integration, data action, queues, and chat widget.
+* **Genesys Cloud CX** - A suite of Genesys Cloud services for enterprise-grade communications, collaboration, and contact center management. In this solution, you use an Architect bot flow, Architect inbound chat flow, and a Genesys Cloud integration, data action, queues, and web chat widget.
 * **Archy** - A Genesys Cloud command-line tool for building and managing Architect flows.
 * **CX as Code** - A Genesys Cloud Terraform provider that provides an interface for declaring core Genesys Cloud objects.
-* **AWS Terraform Provider** - An Amazon-supported Terraform provides an interface for declaring Amazon Web Services infrastructure.
-* **AWS Lambda** - A serverless computing service for running code without creating or maintaining the underlying infrastructure. For more information see, [AWS Lambda](https://aws.amazon.com/translate/ "Opens the Amazon AWS Translate page") on the Amazon featured services website. 
+* **AWS Terraform Provider** - An Amazon-supported Terraform service provides an interface for declaring AWS infrastructure resources including EC2, Lambda, EKS, ECS, VPC, S3, RDS, DynamoDB, and more.
+* **AWS Lambda** - A serverless computing service for running code without creating or maintaining the underlying infrastructure. In this solution, AWS Lambda looks up a customer's order status.  
 
 ## Prerequisites
 
@@ -60,21 +60,6 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 * Administrator-level knowledge of Genesys Cloud
 * AWS Cloud Practitioner-level knowledge of AWS IAM and AWS Lambda
 * Experience with Terraform
-
-## Software development kits
-
-There are no required SDKs needed for this project. This project contains everything to deploy the blueprint, including a pre-compiled version of the AWS lambda. 
-
-If you want changes to the AWS lambda, the source code can be found in the `lambda-orderstatus` directory. To build this lambda, you need the Golang SDK. The latest Golang version of Golang can be found [The Go programming language](https://go.dev/ "Goes to the Go programming language page"). To rebuild the lambda from the source code:
-
-1. Have the Golang SDK installed on the machine.
-2. Change to the `blueprint/lambda-orderstatus directory.
-3. Issue this build command: `GOOS=linux go build -o bin/main ./...`
-
-This builds a Linux executable called `main` in the `bin` directory.  The CX as Code scripts compress this executable and deploy the zip as part of the AWS Lambda deploy via Terraform.
-
-:::primary: **NOTE**: The executable built above onlys run on Linux. Golang allows you build Linux executables on Windows and OS/X, but you will not be able to run them locally.**
-:::
 
 ### Genesys Cloud account
 
@@ -104,10 +89,11 @@ This builds a Linux executable called `main` in the `bin` directory.  The CX as 
 ## Implementation steps
 
 1. [Clone the GitHub repository](#clone-the-github-repository "Goes to the Clone the GitHub repository section")
-2. [Setup your AWS and Genesys Cloud Credentials](#setup-your-aws-and-genesys-cloud-credentials "Goes to the Setup your AWS and Genesys Cloud Credentials section")
-3. [Configure your Terraform build ](#configure-your-terraform-build "Goes to the Configure your Terraform build")
-4. [Run Terraform](#run-terraform "Goes to the Run Terraform section")
-5. [Test the deployment](#test-the-deployment "Goes to the Test the deployment section")
+2. [Set up your AWS and Genesys Cloud Credentials](#set-up-your-aws-and-genesys-cloud-credentials "Goes to the Setup your AWS and Genesys Cloud Credentials section")
+3. [Optionally update the AWS lambda](#optionally-update-the-aws-lambda "Goes to the Optionally update the AWS Lambda section")
+4. [Configure your Terraform build ](#configure-your-terraform-build "Goes to the Configure your Terraform build")
+5. [Run Terraform](#run-terraform "Goes to the Run Terraform section")
+6. [Test the deployment](#test-the-deployment "Goes to the Test the deployment section")
 
 ### Clone the GitHub repository
 
@@ -116,7 +102,7 @@ Clone the GitHub repository [deploy-webchat-chatbot-with-lambda-blueprint](https
 * `terraform` - All Terraform files and Architect flows to deploy the application.
 
 
-### Setup your AWS and Genesys Cloud Credentials
+### Set up your AWS and Genesys Cloud Credentials
 
 To run this project using the AWS and Genesys Cloud Terraform provider, you must open a terminal window, set the following environment variables, and run Terraform in the window where the environment variables are set. The following environment variables are set.
 
@@ -127,6 +113,20 @@ To run this project using the AWS and Genesys Cloud Terraform provider, you must
  * `AWS_SECRET_ACCESS_KEY` - This is the AWS Secret you must set up in your Amazon account to allow the AWS Terraform provider to act against your account.
 
 **Note:** For this project, the Genesys Cloud OAuth Client was given the master admin role. 
+
+### Optionally update the AWS lambda
+
+If you want changes to the AWS lambda, the source code can be found in the `lambda-orderstatus` directory. To build this lambda, you need the Golang SDK. The latest Golang version of Golang can be found [The Go programming language](https://go.dev/ "Goes to the Go programming language page"). To rebuild the lambda from the source code:
+
+1. Have the Golang SDK installed on the machine.
+2. Change to the `blueprint/lambda-orderstatus directory.
+3. Issue this build command: `GOOS=linux go build -o bin/main ./...`
+
+This builds a Linux executable called `main` in the `bin` directory.  The CX as Code scripts compress this executable and deploy the zip as part of the AWS Lambda deploy via Terraform.
+
+:::primary: **NOTE**: The executable built above onlys run on Linux. Golang allows you build Linux executables on Windows and OS/X, but you will not be able to run them locally.**
+:::
+
 
 ### Configure your Terraform build
 
@@ -191,3 +191,8 @@ If you receive a message from a chatbot that there was a problem with your order
 * [Genesys Cloud DevOps Repository](https://github.com/GenesysCloudDevOps "Goes to the Genesys Cloud DevOps repository page") in GitHub. 
 * [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webchat-chatbot-with-lambda-blueprint "Goes to the deploy-webchat-chatbot-with-lambda-blueprint repository") in GitHub.
 * [deploy-webmessaging-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webmessaging-chatbot-with-lambda-blueprint "Goes to the deploy-webmessaging-chatbot-with-lambda-blueprint repository") in GitHub.
+
+
+ALSO
+
+For more information see, [AWS Lambda](https://aws.amazon.com/translate/ "Opens the Amazon AWS Translate page") on the Amazon featured services website. 
