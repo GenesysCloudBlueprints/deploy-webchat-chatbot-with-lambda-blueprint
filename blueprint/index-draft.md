@@ -10,10 +10,10 @@ summary: |
 ---
 This Genesys Cloud Developer blueprint demonstrates how to build a web chat-based chatbot using Genesys Cloud's web chat and bot capabilities and integrating that chatbot with an AWS lambda. All the components used in this solution can be deployed using Terraform, the Terraform AWS provider, and the Terraform Genesys Cloud CX as Code provider.  
 
-![Build a web chat-based chatbot calling an AWS Lambda via a Genesys Cloud Data Action](images/overview.png "Build a web chat-based chatbot calling an AWS Lambda via a Genesys Cloud Data Action")
+![Build a web chat-based chatbot calling an AWS Lambda via a Genesys Cloud data action](images/overview.png "Build a web chat-based chatbot calling an AWS Lambda via a Genesys Cloud data action")
 
 :::{"alert":"info","title":"Important Information","collapsible":false,"autoCollapse":false}
-While Genesys still supports web chats, Genesys is investing in its next generation messaging platform, [Web Messaging](/api/digital/webmessaging/).
+While Genesys still supports web chats, Genesys is investing in its next generation messaging platform, [Web messaging](https://developer.genesys.cloud/commdigital/digital/webmessaging/ "Goes to the Web messaging and Messenger page).
 
 Leverage this blueprint **only** if you have existing web chat deployments. Otherwise, review the [sister blueprint](https://github.com/GenesysCloudBlueprints/deploy-webmessaging-chatbot-with-lambda-blueprint) that delivers the same solution using Web Messaging.
 :::
@@ -58,7 +58,7 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 * A Genesys Cloud license. For more information see, [Genesys Cloud Pricing](https://www.genesys.com/pricing "Goes to the Genesys Cloud pricing page") in the Genesys Cloud website. For this project, you need at least a Genesys Cloud CX 3 license and a botFlows license for your organization.
 * Master Admin role. For more information see, [Roles and permissions overview](https://help.mypurecloud.com/?p=24360 "Goes to the Roles and permissions overview article") in the Genesys Cloud Resource Center.
 * Archy. For more information see, [Welcome to Archy](https://developer.genesys.cloud/devapps/archy/ "Goes to the Welcome to Archy page") in the Genesys Cloud Developer Center.
-* CX as Code. For more information see, [CX as Code](https://developer.genesys.cloud/api/rest/CX-as-Code/ "Goes to the CX as Code page") in the Genesys Cloud Developer Center.
+* CX as Code. For more information see, [CX as Code](https://developer.genesys.cloud/api/rest/cx-as-code/ "Goes to the CX as Code page") in the Genesys Cloud Developer Center.
 
 ### AWS account
 
@@ -73,7 +73,7 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 * Golang 1.16 or higher. For more information, see [Download Golang](https://go.dev/ "Goes to the Go programming languge page") on the Go website. 
 * Archy (the latest version). Archy is Genesys Cloud's command line to deploy Genesys Cloud Architect flows. For more information, see: 
 
-  * [Archy Documentation](/devapps/archy/ "Archy Documentation")
+  * [Archy Documentation](https://developer.genesys.cloud/devapps/archy/ "Archy Documentation")
   * [Installing and Configuring Archy - Video](https://www.youtube.com/watch?v=fOI_vq3PnM8 "Installing and configuring Archy")
   * [Exporting flows with Archy - Video](https://www.youtube.com/watch?v=QAmkM_agsrY "Exporting flows with Archy")
   * [Importing flows with Archy - Video](https://www.youtube.com/watch?v=3NwGJ9X1O0s "Importing flows with Archy")
@@ -191,12 +191,12 @@ If you receive a message from a chatbot that there was a problem with your order
 
 ## Additional resources
 
-* [Genesys Cloud web chat](/api/digital/webchat/ "Goes to the web chat documentation") in the Genesys Cloud Developer Center
-* [Genesys Cloud Web Messaging](/api/digital/webmessaging/ "Goes to the web messaging documentation") in the Genesys Cloud Developer Center
+* [Genesys Cloud web chat](https://developer.genesys.cloud/commdigital/digital/webchat/ "Goes to the Web Chat page") 
+* [Genesys Cloud Web messaging and messenger](https://developer.genesys.cloud/commdigital/digital/webmessaging/ "Goes to the Web messaging and Messenger page")
 * [Genesys Cloud About the data actions integrations](https://help.mypurecloud.com/?p=209478 "Goes to About the data actions integrations article") in the Genesys Cloud Resource Center
 * [Genesys Cloud About the AWS Lambda Data Actions integration](https://help.mypurecloud.com/?p=178553 "Goes to About the AWS Lambda Data Actions integration article") in the Genesys Cloud Resource Center
 * [AWS Lambda](https://aws.amazon.com/lambda/ "Opens the AWS Lambda page") in the Amazon documentation
-* [Terraform Registry Documentation](https://registry.terraform.io/providers/MyPureCloud/genesyscloud/latest/docs "Goes to the Genesys Cloud provider page") in the Terraform documentation
+* [Genesys Cloud Terraform provider documentation](https://registry.terraform.io/providers/MyPureCloud/genesyscloud/latest/docs "Goes to the Genesys Cloud provider page") in the Terraform documentation
 * [Genesys Cloud DevOps repository](https://github.com/GenesysCloudDevOps "Goes to the Genesys Cloud DevOps repository page") in GitHub
 * [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webchat-chatbot-with-lambda-blueprint "Goes to the deploy-webchat-chatbot-with-lambda-blueprint repository") in GitHub
 * [deploy-webmessaging-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webmessaging-chatbot-with-lambda-blueprint "Goes to the deploy-webmessaging-chatbot-with-lambda-blueprint repository") in GitHub
