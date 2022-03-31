@@ -30,10 +30,10 @@ An organization is interested in building a chatbot that allows customers to che
 
 This blueprint explains how to use the following Genesys Cloud capabilities: 
 
-* **Architect bot flow** allows you to define the words and intents associated with speech and text detection in a chat or voice bot. The bot flow leverages machine learning to communicate intelligently with customers.
-* **Architect inbound chat flow** provides the integration and the routing layer that gets the customer to the right information or people.
+* **Architect bot flow** - allows you to define the words and intents associated with speech and text detection in a chat or voice bot. The bot flow leverages machine learning to communicate intelligently with customers.
+* **Architect inbound chat flow** - provides the integration and the routing layer that gets the customer to the right information or people.
 * **Data action** provides the integration to the AWS Lambda that looks up a customer's order status.
-* **Web chat widget** allows developers to create and configure a JavaScript web chat widget that deploys to their organization's website where customers interact with it.
+* **Web chat widget** - allows developers to create and configure a JavaScript web chat widget that deploys to their organization's website where customers interact with it.
 
 Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS IAM roles, and all the CX as Code components from within a single Terraform/CX as Code project.
 
@@ -115,17 +115,17 @@ For information about setting up your AWS credentials on your local machine, see
 **Note:** For this project, the Genesys Cloud OAuth client requires the Master Admin role. 
 :::
 
-### Optionally update the AWS lambda
+### Optionally update the AWS Lambda
 
-If you want changes to the AWS lambda, the source code can be found in the `lambda-orderstatus` directory. To build this lambda, you need the Golang SDK. The latest Golang version of Golang can be found [The Go programming language](https://go.dev/ "Goes to the Go programming language page"). 
+If you want changes to the AWS Lambda, the source code can be found in the `lambda-orderstatus` directory. To build this Lambda, you need the Golang SDK. The latest Golang version of Golang can be found [The Go programming language](https://go.dev/ "Goes to the Go programming language page"). 
 
-To rebuild the lambda from the source code:
+To rebuild the Lambda from the source code:
 
 1. Install the Golang SDK on your local machine.
 2. Change to the `blueprint/lambda-orderstatus directory.
 3. Issue this build command: `GOOS=linux go build -o bin/main ./...`
 
-This builds a Linux executable called `main` in the `bin` directory.  The CX as Code scripts compress this executable and deploy the zip as part of the AWS lambda deploy via Terraform.
+This builds a Linux executable called `main` in the `bin` directory.  The CX as Code scripts compress this executable and deploy the zip as part of the AWS Lambda deploy via Terraform.
 
 :::primary
 **Note**: The executable runs only on Linux. Golang allows you build Linux executables on Windows and OS/X, but you will not be able to run them locally.**
@@ -152,7 +152,7 @@ prefix                 = "dude-order-status"
 ```
 
 :::primary
-**Note**: If you change the environment and prefix, make sure you change the name of the lambda inside the `blueprints/terraform/architect-flows/DudeWheresMyStuffChat_v23-0.yaml` file to the name of the new lambda.
+**Note**: If you change the environment and prefix, make sure you change the name of the Lambda inside the `blueprints/terraform/architect-flows/DudeWheresMyStuffChat_v23-0.yaml` file to the name of the new Lambda.
 :::
 
 ### Run Terraform
@@ -191,16 +191,12 @@ If you receive a message from a chatbot that there was a problem with your order
 
 ## Additional resources
 
-* [Genesys Cloud Web Chat](/api/digital/webchat/ "Goes to the web chat documentation") in the Genesys Cloud Developer Center.
-* [Genesys Cloud Web Messaging](/api/digital/webmessaging/ "Goes to the web messaging documentation") in the Genesys Cloud Developer Center.
+* [Genesys Cloud web chat](/api/digital/webchat/ "Goes to the web chat documentation") in the Genesys Cloud Developer Center
+* [Genesys Cloud Web Messaging](/api/digital/webmessaging/ "Goes to the web messaging documentation") in the Genesys Cloud Developer Center
 * [Genesys Cloud About the data actions integrations](https://help.mypurecloud.com/?p=209478 "Goes to About the data actions integrations article") in the Genesys Cloud Resource Center
-* [Genesys Cloud About the data actions/lambda integrations](https://help.mypurecloud.com/?p=178553 "Goes to About the AWS Lambda Data Actions integration article") in the Genesys Cloud Resource Center.
-* [Terraform Registry Documentation](https://registry.terraform.io/providers/MyPureCloud/genesyscloud/latest/docs "Goes to the Genesys Cloud provider page") in the Terraform documentation.
-* [Genesys Cloud DevOps Repository](https://github.com/GenesysCloudDevOps "Goes to the Genesys Cloud DevOps repository page") in GitHub. 
-* [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webchat-chatbot-with-lambda-blueprint "Goes to the deploy-webchat-chatbot-with-lambda-blueprint repository") in GitHub.
-* [deploy-webmessaging-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webmessaging-chatbot-with-lambda-blueprint "Goes to the deploy-webmessaging-chatbot-with-lambda-blueprint repository") in GitHub.
-
-
-ALSO
-
-For more information see, [AWS Lambda](https://aws.amazon.com/translate/ "Opens the Amazon AWS Translate page") on the Amazon featured services website. 
+* [Genesys Cloud About the AWS Lambda Data Actions integration](https://help.mypurecloud.com/?p=178553 "Goes to About the AWS Lambda Data Actions integration article") in the Genesys Cloud Resource Center
+* [AWS Lambda](https://aws.amazon.com/lambda/ "Opens the AWS Lambda page") in the Amazon documentation
+* [Terraform Registry Documentation](https://registry.terraform.io/providers/MyPureCloud/genesyscloud/latest/docs "Goes to the Genesys Cloud provider page") in the Terraform documentation
+* [Genesys Cloud DevOps repository](https://github.com/GenesysCloudDevOps "Goes to the Genesys Cloud DevOps repository page") in GitHub
+* [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webchat-chatbot-with-lambda-blueprint "Goes to the deploy-webchat-chatbot-with-lambda-blueprint repository") in GitHub
+* [deploy-webmessaging-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webmessaging-chatbot-with-lambda-blueprint "Goes to the deploy-webmessaging-chatbot-with-lambda-blueprint repository") in GitHub
