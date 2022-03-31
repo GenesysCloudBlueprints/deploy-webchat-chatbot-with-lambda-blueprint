@@ -37,14 +37,6 @@ This blueprint explains how to use the following Genesys Cloud capabilities:
 
 Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS IAM roles, and all the CX as Code components from within a single Terraform/CX as Code project.
 
-## Contents
-
-* [Solution components](#solution-components "Goes to the Solution components section")
-* [Software development kits](#software-development-kits "Goes to the Software development kits section")
-* [Prerequisites](#prerequisites "Goes to the Prerequisites section")
-* [Implementation steps](#implementation-steps "Goes to the Implementation steps section")
-* [Additional resources](#additional-resources "Goes to the Additional resources section")
-
 ## Solution components
 
 * **Genesys Cloud CX** - A suite of Genesys Cloud services for enterprise-grade communications, collaboration, and contact center management. In this solution, you use an Architect bot flow, Architect inbound chat flow, and a Genesys Cloud integration, data action, queues, and web chat widget.
