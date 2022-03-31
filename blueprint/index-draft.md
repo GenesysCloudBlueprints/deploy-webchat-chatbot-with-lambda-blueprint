@@ -24,7 +24,7 @@ An organization is interested in building a chatbot that allows customers to che
 
 * Quickly implement a chatbot on the company website with minimal coding effort.
 * Implement a chatbot across multiple contact center channels. Initially, the bot flow will process inbound chats. By designing the flow in a non-channel-specific way, the dev team will be able to integrate it with a voice channel later.
-* Integrate the chatbot with an existing AWS lambda that looks up the order status for a customer. By promoting reuse, the development team will speed up delivery and demonstrate efficient design.
+* Integrate the chatbot with an existing AWS Lambda that looks up the order status for a customer. By promoting reuse, the development team will speed up delivery and demonstrate efficient design.
 
 ## Solution
 
@@ -32,7 +32,7 @@ This blueprint explains how to use the following Genesys Cloud capabilities:
 
 * **Architect bot flow** allows you to define the words and intents associated with speech and text detection in a chat or voice bot. The bot flow leverages machine learning to communicate intelligently with customers.
 * **Architect inbound chat flow** provides the integration and the routing layer that gets the customer to the right information or people.
-* **Data action** provides the integration to the AWS lambda that looks up a customer's order status.
+* **Data action** provides the integration to the AWS Lambda that looks up a customer's order status.
 * **Web chat widget** allows developers to create and configure a JavaScript web chat widget that deploys to their organization's website where customers interact with it.
 
 Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS IAM roles, and all the CX as Code components from within a single Terraform/CX as Code project.
@@ -64,7 +64,7 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 
 * An administrator account with permissions to access these services:
   * AWS Identity and Access Management (IAM)
-  * AWS lambda
+  * AWS Lambda
   * AWS credentials
   
 ### Development tools running in your local environment
@@ -83,7 +83,7 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 1. [Clone the GitHub repository](#clone-the-github-repository "Goes to the Clone the GitHub repository section")
 2. [Set up your AWS credentials](#set-up-your-aws-credentials "Goes to the Set up your AWS credentials section")
 3. [Set up your Genesys Cloud credentials](#set-up-your-genesys-cloud-credentials "Goes to the Set up your Genesys Cloud credentials section")
-4. [Optionally update the AWS lambda](#optionally-update-the-aws-lambda "Goes to the Optionally update the AWS Lambda section")
+4. [Optionally update the AWS Lambda](#optionally-update-the-aws-lambda "Goes to the Optionally update the AWS Lambda section")
 5. [Configure your Terraform build ](#configure-your-terraform-build "Goes to the Configure your Terraform build")
 6. [Run Terraform](#run-terraform "Goes to the Run Terraform section")
 7. [Test the deployment](#test-the-deployment "Goes to the Test the deployment section")
@@ -92,7 +92,7 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 
 Clone the GitHub repository [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webchat-chatbot-with-lambda-blueprint "Goes to the GitHub repository") on your local machine. The `deploy-webchat-chatbot-with-lambda-blueprint/blueprint` folder includes solution-specific scripts and files in these subfolders:
 
-* `lambda-orderstatus` - Source code for the AWS lambda used in this application
+* `lambda-orderstatus` - Source code for the AWS Lambda used in this application
 * `terraform` - All Terraform files and Architect flows that are needed to deploy the application
 
 ### Set up your AWS credentials
