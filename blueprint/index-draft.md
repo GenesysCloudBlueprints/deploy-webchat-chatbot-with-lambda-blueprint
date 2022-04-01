@@ -90,7 +90,7 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 
 ### Clone the GitHub repository
 
-Clone the GitHub repository [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webchat-chatbot-with-lambda-blueprint "Goes to the GitHub repository") on your local machine. The deploy-webchat-chatbot-with-lambda-blueprint/blueprint folder includes solution-specific scripts and files in these subfolders:
+Clone the [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webchat-chatbot-with-lambda-blueprint) GitHub repository on your local machine. The deploy-webchat-chatbot-with-lambda-blueprint/blueprint folder includes solution-specific scripts and files in these subfolders:
 
 * lambda-orderstatus - Source code for the AWS Lambda used in this application
 * terraform - All Terraform files and Architect flows that are needed to deploy the application
