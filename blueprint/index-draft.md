@@ -49,17 +49,7 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 
 No Genesys Cloud SDKs are needed for this blueprint solution. However, if you want changes to the AWS Lambda, you need the Golang SDK to build it. For the latest Golang version, see [The Go programming language](https://go.dev/dl/ "Goes to the Downloads page on the Go website"). 
 
-To rebuild the Lambda from the source code:
-
-1. Install the Golang SDK on your local machine.
-2. Navigate to the blueprint/lambda-orderstatus folder.
-3. Issue this build command: `GOOS=linux go build -o bin/main ./...`
-
-This builds a Linux executable called `main` in the `bin` folder.  The CX as Code scripts compress this executable and deploy the zip as part of the AWS Lambda deploy via Terraform.
-
-:::primary
-**Note**: The executable runs only on Linux. Golang allows you build Linux executables on Windows and OS/X, but you will not be able to run them locally.**
-:::
+For more information, see [Optionally update the AWS Lambda](#optionally-update-the-aws-lambda "Goes to the Optionally update the AWS Lambda section").
 
 ## Prerequisites
 
@@ -93,6 +83,20 @@ This builds a Linux executable called `main` in the `bin` folder.  The CX as Cod
   * [Installing and Configuring Archy - Video](https://www.youtube.com/watch?v=fOI_vq3PnM8 "Goes to the DevDrop 8a: Installing and configuring Archy video") in YouTube
   * [Exporting flows with Archy - Video](https://www.youtube.com/watch?v=QAmkM_agsrY "Goes to the DevDrop 8b: Exporting flows with Archy video") in YouTube
   * [Importing flows with Archy - Video](https://www.youtube.com/watch?v=3NwGJ9X1O0s "Goes to the DevDrop 8c: Importing an Architect flow using Archy video") in YouTube
+
+## Optionally update the AWS Lambda
+
+To rebuild the Lambda from the source code:
+
+1. Install the Golang SDK on your local machine.
+2. Navigate to the blueprint/lambda-orderstatus folder.
+3. Issue this build command: `GOOS=linux go build -o bin/main ./...`
+
+This builds a Linux executable called `main` in the `bin` folder.  The CX as Code scripts compress this executable and deploy the zip as part of the AWS Lambda deploy via Terraform.
+
+:::primary
+**Note**: The executable runs only on Linux. Golang allows you build Linux executables on Windows and OS/X, but you will not be able to run them locally.**
+:::
 
 ## Implementation steps
 
