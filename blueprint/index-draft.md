@@ -47,12 +47,12 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 
 ## Software development kits
 
-No Genesys Cloud SDKs are needed for this blueprint solution. However, if you want changes to the AWS Lambda, you need the Golang SDK to build it. The Lambda source code can be found in the lambda-orderstatus folder. For the latest Golang version, see [The Go programming language](https://go.dev/dl/ "Goes to the Downloads page on the Go website"). 
+No Genesys Cloud SDKs are needed for this blueprint solution. However, if you want changes to the AWS Lambda, you need the Golang SDK to build it. For the latest Golang version, see [The Go programming language](https://go.dev/dl/ "Goes to the Downloads page on the Go website"). 
 
 To rebuild the Lambda from the source code:
 
 1. Install the Golang SDK on your local machine.
-2. Change to the blueprint/lambda-orderstatus folder.
+2. Navigate to the blueprint/lambda-orderstatus folder.
 3. Issue this build command: `GOOS=linux go build -o bin/main ./...`
 
 This builds a Linux executable called `main` in the `bin` folder.  The CX as Code scripts compress this executable and deploy the zip as part of the AWS Lambda deploy via Terraform.
