@@ -90,10 +90,10 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 
 ### Clone the GitHub repository
 
-Clone the GitHub repository [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webchat-chatbot-with-lambda-blueprint "Goes to the GitHub repository") on your local machine. The `deploy-webchat-chatbot-with-lambda-blueprint/blueprint` folder includes solution-specific scripts and files in these subfolders:
+Clone the GitHub repository [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webchat-chatbot-with-lambda-blueprint "Goes to the GitHub repository") on your local machine. The deploy-webchat-chatbot-with-lambda-blueprint/blueprint folder includes solution-specific scripts and files in these subfolders:
 
-* `lambda-orderstatus` - Source code for the AWS Lambda used in this application
-* `terraform` - All Terraform files and Architect flows that are needed to deploy the application
+* lambda-orderstatus - Source code for the AWS Lambda used in this application
+* terraform - All Terraform files and Architect flows that are needed to deploy the application
 
 ### Set up your AWS credentials
 
@@ -117,12 +117,12 @@ For information about setting up your AWS credentials on your local machine, see
 
 ### Optionally update the AWS Lambda
 
-If you want changes to the AWS Lambda, the source code can be found in the `lambda-orderstatus` directory. To build this Lambda, you need the Golang SDK. The latest Golang version of Golang can be found [The Go programming language](https://go.dev/ "Goes to the Go programming language page"). 
+If you want changes to the AWS Lambda, the source code can be found in the lambda-orderstatus folder. To build this Lambda, you need the Golang SDK. For the latest Golang version, see [The Go programming language](https://go.dev/ "Goes to the Go programming language page"). 
 
 To rebuild the Lambda from the source code:
 
 1. Install the Golang SDK on your local machine.
-2. Change to the `blueprint/lambda-orderstatus directory.
+2. Change to the blueprint/lambda-orderstatus folder.
 3. Issue this build command: `GOOS=linux go build -o bin/main ./...`
 
 This builds a Linux executable called `main` in the `bin` directory.  The CX as Code scripts compress this executable and deploy the zip as part of the AWS Lambda deploy via Terraform.
@@ -135,14 +135,14 @@ This builds a Linux executable called `main` in the `bin` directory.  The CX as 
 
 You must define several values that are specific to your AWS region and Genesys Cloud organization. 
 
-In the `blueprint/terraform/dev.auto.tfvars` file, set the following values:
+In the blueprint/terraform/dev.auto.tfvars file, set the following values:
 
 * `organizationId` - Your Genesys Cloud organization ID
 * `awsRegion` - The AWS region (for example us-east-1, us-west-2) where you are going to deploy the target AWS lambda.
 * `environment` - This is a free-form field that combines with the prefix value to define the name of various AWS and Genesys Cloud artifacts. For example, if you set the environment name to be `dev` and the prefix to be `dude-order-status` your AWS lambda, IAM roles, Genesys Cloud Integration and Data Actions will all begin with `dev-dude-order-status`.
 * `prefix`- This a free-form field that combines with the environment value to define the name of various AWS and Genesys Cloud artifacts.
 
-The following is an example of the `dev.auto.tfvars` used by the author of this blueprint.
+The following is an example of the dev.auto.tfvars file that was created by the author of this blueprint.
 
 ```
 organizationId = "011a0480-9a1e-4da9-8cdd-2642474cf92a"
@@ -152,14 +152,14 @@ prefix                 = "dude-order-status"
 ```
 
 :::primary
-**Note**: If you change the environment and prefix, make sure you change the name of the Lambda inside the `blueprints/terraform/architect-flows/DudeWheresMyStuffChat_v23-0.yaml` file to the name of the new Lambda.
+**Note**: If you change the environment and prefix, make sure you change the name of the Lambda inside the blueprints/terraform/architect-flows/DudeWheresMyStuffChat_v23-0.yaml file to the name of the new Lambda.
 :::
 
 ### Run Terraform
 
 You are now ready to run this blueprint solution for your organization. 
 
-1. Change to the `blueprints/terraform` directory and issue these commands:
+1. Change to the blueprints/terraform folder and issue these commands:
 
 * `terraform plan` - This executes a trial run against your Genesys Cloud organization and shows you a list of all the AWS, and Genesys Cloud resources created. Review this list and make sure you are comfortable with the activity being undertake before continuing to the second step.
 
@@ -181,11 +181,11 @@ After the chatbot is deployed to your environment, use the Genesys Cloud Web Cha
 2. From the **Deployment** list, select your chat deployment. In the diagram above, the sample deployment would appear as `dev-dude-order-status-chat-widget`. If you do not see your chat deployment, the web chat widget did not deploy correctly.
 3. Select a queue. This is a Web Chat harness tool requirement. For this example, the 401K queue within my organization was selected.
 4. To quickly complete the **Chat Data** fields, click **Populate Fields**.  
-5. Click **Start Chat**. This button initiates a chat with your organization. After the chat starts, you are greeted by a chat bot that asks, "`How can I help you with your order today?`". 
-6. Respond by entering `order status`. 
-7. When prompted for your 8-digit order number, enter `12345678`. 
+5. Click **Start Chat**. This button initiates a chat with your organization. After the chat starts, you are greeted by a chat bot that asks, "How can I help you with your order today?". 
+6. Respond by entering **order status**. 
+7. When prompted for your 8-digit order number, enter **12345678**. 
 
-You should see the response of `Hi, Thanks for reaching out to us about order #: 12345678. The status of the order is Shipped`. If you receive this response, the chat bot has successfully connected with the AWS lambda, which then successfully processed your request for the order status.
+You should see the response of **Hi, Thanks for reaching out to us about order #: 12345678. The status of the order is Shipped**. If you receive this response, the chat bot has successfully connected with the AWS lambda, which then successfully processed your request for the order status.
 
 If you receive a message from a chatbot that there was a problem with your order, the AWS lambda did not deploy properly and Genesys Cloud had a problem invoking it.
 
