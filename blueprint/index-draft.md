@@ -186,7 +186,7 @@ If you receive a message from a chatbot that there was a problem with your order
 * [Genesys Cloud web chat](https://developer.genesys.cloud/commdigital/digital/webchat/ "Goes to the Web Chat page") 
 * [About widgets for web chat](https://help.mypurecloud.com/articles/about-widgets-for-web-chat/ "Goes to the About widgets for web chat article") in the Genesys Cloud Resource Center
 * [Genesys Cloud Web messaging and messenger](https://developer.genesys.cloud/commdigital/digital/webmessaging/ "Goes to the Web messaging and Messenger page")
-* [About Web messaging and messenger](https://help.mypurecloud.com/?p=228564 "Goes to the About Web messaging and messenger article) in the Genesys Cloud Resource Center
+* [About Web messaging and messenger](https://help.mypurecloud.com/?p=228564 "Goes to the About Web messaging and messenger article") in the Genesys Cloud Resource Center
 * [Genesys Cloud About the data actions integrations](https://help.mypurecloud.com/?p=209478 "Goes to About the data actions integrations article") in the Genesys Cloud Resource Center
 * [Genesys Cloud About the AWS Lambda Data Actions integration](https://help.mypurecloud.com/?p=178553 "Goes to About the AWS Lambda Data Actions integration article") in the Genesys Cloud Resource Center
 * [AWS Lambda](https://aws.amazon.com/lambda/ "Opens the AWS Lambda page") in the Amazon documentation
