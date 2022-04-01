@@ -80,14 +80,6 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 
 ## Implementation steps
 
-1. [Clone the GitHub repository](#clone-the-github-repository "Goes to the Clone the GitHub repository section")
-2. [Set up your AWS credentials](#set-up-your-aws-credentials "Goes to the Set up your AWS credentials section")
-3. [Set up your Genesys Cloud credentials](#set-up-your-genesys-cloud-credentials "Goes to the Set up your Genesys Cloud credentials section")
-4. [Optionally update the AWS Lambda](#optionally-update-the-aws-lambda "Goes to the Optionally update the AWS Lambda section")
-5. [Configure your Terraform build ](#configure-your-terraform-build "Goes to the Configure your Terraform build")
-6. [Run Terraform](#run-terraform "Goes to the Run Terraform section")
-7. [Test the deployment](#test-the-deployment "Goes to the Test the deployment section")
-
 ### Clone the GitHub repository
 
 Clone the [deploy-webchat-chatbot-with-lambda-blueprint](https://github.com/GenesysCloudBlueprints/deploy-webchat-chatbot-with-lambda-blueprint) GitHub repository on your local machine. The deploy-webchat-chatbot-with-lambda-blueprint/blueprint folder includes solution-specific scripts and files in these subfolders:
