@@ -55,7 +55,7 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 
 ### Genesys Cloud account
 
-* A Genesys Cloud license. For more information see, [Genesys Cloud Pricing](https://www.genesys.com/pricing "Goes to the Genesys Cloud pricing page") in the Genesys Cloud website. For this project, you need at least a Genesys Cloud CX 3 license and a botFlows license for your organization.
+* A Genesys Cloud license. For more information see, [Genesys Cloud Pricing](https://www.genesys.com/pricing "Goes to the Genesys Cloud pricing page") in the Genesys Cloud website. For this project, you need at least a Genesys Cloud CX 3 license and a botFlows product for your organization.
 * Master Admin role. For more information see, [Roles and permissions overview](https://help.mypurecloud.com/?p=24360 "Goes to the Roles and permissions overview article") in the Genesys Cloud Resource Center.
 * Archy. For more information see, [Welcome to Archy](https://developer.genesys.cloud/devapps/archy/ "Goes to the Welcome to Archy page") in the Genesys Cloud Developer Center.
 * CX as Code. For more information see, [CX as Code](https://developer.genesys.cloud/api/rest/cx-as-code/ "Goes to the CX as Code page") in the Genesys Cloud Developer Center.
