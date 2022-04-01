@@ -117,7 +117,7 @@ For information about setting up your AWS credentials on your local machine, see
 
 ### Optionally update the AWS Lambda
 
-If you want changes to the AWS Lambda, the source code can be found in the lambda-orderstatus folder. To build this Lambda, you need the Golang SDK. For the latest Golang version, see [The Go programming language](https://go.dev/ "Goes to the Go programming language page"). 
+If you want changes to the AWS Lambda, the source code can be found in the lambda-orderstatus folder. To build this Lambda, you need the Golang SDK. For the latest Golang version, see [The Go programming language](https://go.dev/dl/ "Goes to the Downloads page on the Go website"). 
 
 To rebuild the Lambda from the source code:
 
