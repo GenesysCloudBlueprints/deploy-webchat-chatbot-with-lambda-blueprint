@@ -165,13 +165,13 @@ After the `terraform apply --auto-approve` command has completed, you should see
 
 ### Test your deployment
 
-After the chatbot is deployed to your environment, use the Genesys Cloud Web Chat feature to test the newly deployed web chat, as shown below.  
+After the chatbot is deployed to your environment, use the Genesys Cloud Web Chat feature to test it.  
 
 ![Test your deployed web chat](images/testchat.png "Test your deployed web chat")
 
-1. Go to the [Genesys Cloud Web Chat harness](https://developer.genesys.cloud/developer-tools/#/webchat) in the Genesys Cloud Developer Center.  
+1. Go to the [Web Chat developer tool](https://developer.genesys.cloud/developer-tools/#/webchat) in the Genesys Cloud Developer Center.  
 2. From the **Deployment** list, select your chat deployment. In the diagram above, the sample deployment would appear as `dev-dude-order-status-chat-widget`. If you do not see your chat deployment, the web chat widget did not deploy correctly.
-3. Select a queue. This is a Web Chat harness tool requirement. For this example, the 401K queue within my organization was selected.
+3. Select a queue. This is a requirement of the Web Chat developer tool. For this example, the 401K queue within my organization was selected.
 4. To quickly complete the **Chat Data** fields, click **Populate Fields**.  
 5. Click **Start Chat**. This button initiates a chat with your organization. After the chat starts, you are greeted by a chat bot that asks, "How can I help you with your order today?". 
 6. Respond by entering **order status**. 
