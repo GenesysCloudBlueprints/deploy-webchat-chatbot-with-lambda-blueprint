@@ -73,10 +73,10 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 * Golang 1.16 or higher. For more information, see [Download Golang](https://go.dev/ "Goes to the Go programming languge page") on the Go website. 
 * Archy (the latest version). Archy is Genesys Cloud's command line to deploy Genesys Cloud Architect flows. For more information, see: 
 
-  * [Archy Documentation](https://developer.genesys.cloud/devapps/archy/ "Archy Documentation")
-  * [Installing and Configuring Archy - Video](https://www.youtube.com/watch?v=fOI_vq3PnM8 "Installing and configuring Archy")
-  * [Exporting flows with Archy - Video](https://www.youtube.com/watch?v=QAmkM_agsrY "Exporting flows with Archy")
-  * [Importing flows with Archy - Video](https://www.youtube.com/watch?v=3NwGJ9X1O0s "Importing flows with Archy")
+  * [Archy Documentation](https://developer.genesys.cloud/devapps/archy/ "Goes to the Welcome to Archy page")
+  * [Installing and Configuring Archy - Video](https://www.youtube.com/watch?v=fOI_vq3PnM8 "Goes to the DevDrop 8a: Installing and configuring Archy video") in YouTube
+  * [Exporting flows with Archy - Video](https://www.youtube.com/watch?v=QAmkM_agsrY "Goes to the DevDrop 8b: Exporting flows with Archy video") in YouTube
+  * [Importing flows with Archy - Video](https://www.youtube.com/watch?v=3NwGJ9X1O0s "Goes to the DevDrop 8c: Importing an Architect flow using Archy video") in YouTube
 
 ## Implementation steps
 
