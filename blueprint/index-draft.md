@@ -45,6 +45,22 @@ Additionally, this blueprint explains how to deploy the AWS Lambda, all the AWS 
 * **AWS Terraform Provider** - An Amazon-supported Terraform service provides an interface for declaring AWS infrastructure resources including EC2, Lambda, EKS, ECS, VPC, S3, RDS, DynamoDB, and more.
 * **AWS Lambda** - A serverless computing service for running code without creating or maintaining the underlying infrastructure. In this solution, AWS Lambda looks up a customer's order status.  
 
+## Software development kits
+
+No Genesys Cloud SDKs are needed for this blueprint solution. However, if you want changes to the AWS Lambda, you need the Golang SDK to build it. The Lambda source code can be found in the lambda-orderstatus folder. For the latest Golang version, see [The Go programming language](https://go.dev/dl/ "Goes to the Downloads page on the Go website"). 
+
+To rebuild the Lambda from the source code:
+
+1. Install the Golang SDK on your local machine.
+2. Change to the blueprint/lambda-orderstatus folder.
+3. Issue this build command: `GOOS=linux go build -o bin/main ./...`
+
+This builds a Linux executable called `main` in the `bin` folder.  The CX as Code scripts compress this executable and deploy the zip as part of the AWS Lambda deploy via Terraform.
+
+:::primary
+**Note**: The executable runs only on Linux. Golang allows you build Linux executables on Windows and OS/X, but you will not be able to run them locally.**
+:::
+
 ## Prerequisites
 
 ### Specialized knowledge
@@ -107,22 +123,6 @@ For information about setting up your AWS credentials on your local machine, see
 **Note:** For this project, the Genesys Cloud OAuth client requires the Master Admin role. 
 :::
 
-### Optionally update the AWS Lambda
-
-If you want changes to the AWS Lambda, the source code can be found in the lambda-orderstatus folder. To build this Lambda, you need the Golang SDK. For the latest Golang version, see [The Go programming language](https://go.dev/dl/ "Goes to the Downloads page on the Go website"). 
-
-To rebuild the Lambda from the source code:
-
-1. Install the Golang SDK on your local machine.
-2. Change to the blueprint/lambda-orderstatus folder.
-3. Issue this build command: `GOOS=linux go build -o bin/main ./...`
-
-This builds a Linux executable called `main` in the `bin` directory.  The CX as Code scripts compress this executable and deploy the zip as part of the AWS Lambda deploy via Terraform.
-
-:::primary
-**Note**: The executable runs only on Linux. Golang allows you build Linux executables on Windows and OS/X, but you will not be able to run them locally.**
-:::
-
 ### Configure your Terraform build
 
 You must define several values that are specific to your AWS region and Genesys Cloud organization. 
@@ -131,7 +131,7 @@ In the blueprint/terraform/dev.auto.tfvars file, set the following values:
 
 * `organizationId` - Your Genesys Cloud organization ID
 * `awsRegion` - The AWS region (for example us-east-1, us-west-2) where you are going to deploy the target AWS lambda.
-* `environment` - This is a free-form field that combines with the prefix value to define the name of various AWS and Genesys Cloud artifacts. For example, if you set the environment name to be `dev` and the prefix to be `dude-order-status` your AWS lambda, IAM roles, Genesys Cloud Integration and Data Actions will all begin with `dev-dude-order-status`.
+* `environment` - This is a free-form field that combines with the prefix value to define the name of various AWS and Genesys Cloud artifacts. For example, if you set the environment name to be `dev` and the prefix to be `dude-order-status` your AWS lambda, IAM roles, Genesys Cloud integration and data actions will all begin with `dev-dude-order-status`.
 * `prefix`- This a free-form field that combines with the environment value to define the name of various AWS and Genesys Cloud artifacts.
 
 The following is an example of the dev.auto.tfvars file that was created by the author of this blueprint.
@@ -159,9 +159,9 @@ You are now ready to run this blueprint solution for your organization.
 
 After the `terraform apply --auto-approve` command has completed, you should see the output of the entire run along with the number of objects successfully created by Terraform. Keep these points in mind:
 
-*  This project assumes you are running using a local Terraform backing state. This means that the `tfstate` files will be created in the same directory where you ran the project. Terraform does not recommend using local Terraform backing state files unless you run from a desktop and are comfortable with the deleted files.
+*  This project assumes you are running using a local Terraform backing state. This means that the `tfstate` files will be created in the same folder where you ran the project. Terraform does not recommend using local Terraform backing state files unless you run from a desktop and are comfortable with the deleted files.
 
-* As long as your local Terraform backing state projects are kept, you can tear down the blueprint in question by changing to the `blueprint/terraform` directory and issuing a `terraform destroy --auto-approve` command. This destroys all objects currently managed by the local Terraform backing state.
+* As long as your local Terraform backing state projects are kept, you can tear down the blueprint in question by changing to the `blueprint/terraform` folder and issuing a `terraform destroy --auto-approve` command. This destroys all objects currently managed by the local Terraform backing state.
 
 ### Test your deployment
 
