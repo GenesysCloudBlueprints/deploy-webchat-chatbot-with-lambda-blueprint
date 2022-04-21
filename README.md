@@ -1,14 +1,6 @@
-# Build a Web Chat chatbot calling an AWS Lambda via a Genesys Cloud Data Action (DRAFT)
+# Build a web chat-based chatbot that calls an AWS Lambda via a Genesys Cloud data action (DRAFT)
 
-> View the full [Build a Web Chat chatbot calling an AWS Lambda via a Genesys Cloud Data Action](https://developer.mypurecloud.com/blueprints/) article on the Genesys Cloud Developer Center. This Genesys Cloud Developer blueprint demonstrates how to build a chatbot using Genesys Cloud's Web Chat capabilities and integrating that chatbot with an AWS lambda. 
+This Genesys Cloud Developer blueprint demonstrates how to build a web chat-based chatbot using Genesys Cloud's web chat and bot capabilities and integrate that chatbot with an AWS lambda. All the components used in this solution can be deployed using Terraform, the Terraform AWS provider, and the Terraform Genesys Cloud CX as Code provider.
+---
 
-This blueprint also demonstrates how to:
-
-* Build a bot Genesys Cloud Architect flow leverages machine learning to communicate intelligently with the a user.
-* Built an inbound chat Genesys Cloud Architect flow this will integrate with the bot flow. 
-* Expose the chatbot for consumption using the Genesys Cloud Web Chat widget.
-* Integrate an AWS Lambda in the inbound chat flow using a Genesys Cloud Data Action.
-* Deploy both the AWS Lambda, all AWS IAM roles and CX as Code components all from within a single Terraform/CX as Code project.
-
-
-![Build a web chat-based chatbot calling an AWS Lambda via a Genesys Cloud Data Action](blueprint/images/overview.png "Build a web-based chatbot calling an AWS Lambda via a Genesys Cloud Data Action")
+![Build a web chat-based chatbot calling an AWS Lambda via a Genesys Cloud data action](images/overview.png "Build a web chat-based chatbot calling an AWS Lambda via a Genesys Cloud data action")
