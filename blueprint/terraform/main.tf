@@ -46,6 +46,10 @@ module "dude_queues" {
   classifier_queue_members = []
 }
 
+
+/*   
+   Creates the bot flow and inbound chat flow
+*/
 module "my_chat_flow" {
   source      = "./modules/flows"
 }
