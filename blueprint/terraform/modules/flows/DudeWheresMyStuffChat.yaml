@@ -1,8 +1,8 @@
 inboundChat:
-  name: DudeWheresMyStuffChat
+  name: "{{flow_name}}"
   description: Chat bot for Dude Wheres My Stuff
   startUpRef: "/inboundChat/states/state[Initial State_20]"
-  defaultLanguage: en-us
+  defaultLanguage: "{{default_language}}"
   supportedLanguages:
     en-us:
       defaultLanguageSkill:
