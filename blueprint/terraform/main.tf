@@ -46,12 +46,14 @@ module "dude_queues" {
   classifier_queue_members = []
 }
 
-
-/*   
-   Creates the bot flow and inbound chat flow
+/*
+   Looks up the id of the flow so we can associate it with a widget
 */
-module "my_chat_flow" {
-  source      = "./modules/flows"
+data "genesyscloud_flow" "my_chat_flow" {
+  depends_on = [
+    null_resource.deploy_archy_flow_chat
+  ]
+  name = "DudeWheresMyStuffChat"
 }
 
 /*   
@@ -61,7 +63,7 @@ module "widget_deploy" {
   source      = "./modules/widget_deployment"
   environment = var.environment
   prefix      = var.prefix
-  flowId      = module.my_chat_flow.flow_id
+  flowId      = data.genesyscloud_flow.my_chat_flow.id
 }
 
 
