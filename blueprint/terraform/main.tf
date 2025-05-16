@@ -48,22 +48,39 @@ module "dude_queues" {
 
 
 /*   
-   Creates the bot flow and inbound chat flow
+   Creates the bot flow and inbound message flow
 */
 module "my_chat_flow" {
-  source      = "./modules/flows"
-  integration_category = module.lambda_data_action.integration_data_action_category
+  source                       = "./modules/flows"
+  integration_category         = module.lambda_data_action.integration_data_action_category
   integration_data_action_name = module.lambda_data_action.integration_data_action_name
 }
 
 /*   
    Configures the widget deployment
+   Chat Widget is deprecated
 */
-module "widget_deploy" {
-  source      = "./modules/widget_deployment"
-  environment = var.environment
-  prefix      = var.prefix
-  flowId      = module.my_chat_flow.flow_id
+# module "widget_deploy" {
+#   source      = "./modules/widget_deployment"
+#   environment = var.environment
+#   prefix      = var.prefix
+#   flowId      = module.my_chat_flow.flow_id
+# }
+
+# Create Messenger Configuration
+module "web_config" {
+  source                            = "./modules/webdeployments_configuration"
+  web_deployment_configuration_name = "${var.environment}-${var.prefix}-web-configuration"
+}
+
+# Create Messenger Deployment
+module "web_deploy" {
+  source              = "./modules/webdeployments_deployment"
+  web_deployment_name = "${var.environment}-${var.prefix}-web-deployment"
+  flow_id             = module.my_chat_flow.message_flow_id
+  config_id           = module.web_config.config_id
+  config_ver          = module.web_config.config_ver
+  depends_on          = [module.my_chat_flow]
 }
 
 
