@@ -8,6 +8,7 @@ resource "genesyscloud_flow" "deploy_archy_flow_bot" {
 
 resource "genesyscloud_flow" "deploy_archy_flow_chat" {
   filepath = "${path.module}/DudeWheresMyStuffChat.yaml"
+  file_content_hash = filesha256("${path.module}/DudeWheresMyStuffChat.yaml") 
   substitutions = {
     flow_name           = "DudeWheresMyStuffChat"
     default_language    = "en-us"
